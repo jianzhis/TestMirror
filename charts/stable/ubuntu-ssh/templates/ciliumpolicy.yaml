@@ -1,0 +1,33 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: {{ include "ubuntu-ssh.fullname" . }}-bandwidth-limit
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "ubuntu-ssh.labels" . | nindent 4 }}
+spec:
+  endpointSelector:
+    matchLabels:
+      {{- include "ubuntu-ssh.selectorLabels" . | nindent 6 }}
+  egress:
+    - toEndpoints:
+        # 允许的目标端点（可根据需要指定）
+        - matchLabels:
+            app: some-app
+      toPorts:
+        - ports:
+            - port: "22"
+              protocol: TCP
+      rateLimit:
+        limit: "{{ .Values.network.egressLimit | default "50Mbps" }}"  # 带宽限制
+  ingress:
+    - fromEndpoints:
+        # 允许的源端点（可根据需要指定）
+        - matchLabels:
+            app: some-app
+      toPorts:
+        - ports:
+            - port: "22"
+              protocol: TCP
+      rateLimit:
+        limit: "{{ .Values.network.ingressLimit | default "50Mbps" }}"  # 带宽限制
