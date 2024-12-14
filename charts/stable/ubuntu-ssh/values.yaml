@@ -1,10 +1,9 @@
-replicaCount: 1
-
 image:
   imageRegistry: "registry-2.yunna.net"
   repository: nidexiong/ubuntu-ssh
   tag: "latest"
   pullPolicy: IfNotPresent
+  ubuntuVersion: "latest" # 默认值，可以选择 "20.04" 或 "22.04"
 
 service:
   type: ClusterIP
@@ -12,8 +11,8 @@ service:
 
 resources:
   limits:
-    cpu: 500m
-    memory: 512Mi
+    cpu: 1000m
+    memory: 1000Mi
   requests:
     cpu: 250m
     memory: 256Mi
@@ -21,5 +20,5 @@ resources:
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 1Gi
+  size: 10Gi
   storageClass: "local"

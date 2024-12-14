@@ -18,6 +18,9 @@ spec:
         - name: ubuntu-ssh
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: UBUNTU_VERSION
+              value: "{{ .Values.image.ubuntuVersion }}" # 将 Ubuntu 版本作为环境变量传递
           ports:
             - containerPort: {{ .Values.service.port }}
           command:
