@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  imageRegistry: "registry-2.yunna.net"
-  repository: ubuntu/ssh-tools
-  tag: "latest"
+  imageRegistry: "docker.io"
+  repository: ubuntu
+  tag: "22.04"
   pullPolicy: IfNotPresent
 
 service:

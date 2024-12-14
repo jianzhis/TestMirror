@@ -24,6 +24,16 @@ spec:
               value: {{ .Values.env.env1.value | quote }}
             - name: {{ .Values.env.env2.name }}
               value: {{ .Values.env.env2.value | quote }}
+          command:
+            - /bin/bash
+            - -c
+            - |
+              apt-get update && \
+              apt-get install -y openssh-server && \
+              mkdir -p /var/run/sshd && \
+              echo "root:password" | chpasswd && \
+              sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
+              /usr/sbin/sshd -D
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
