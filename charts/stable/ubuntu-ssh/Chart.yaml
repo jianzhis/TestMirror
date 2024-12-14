@@ -2,8 +2,8 @@ apiVersion: v2
 name: ubuntu-ssh
 description: |
   基于 Ubuntu 的 Helm Chart，内置 SSH 服务和常用工具。
-version: 20.04 # 默认与 Ubuntu 版本对应
-appVersion: "{{ .Values.image.tag }}" # 动态获取 values.yaml 中的 tag
+version: "{{ include "ubuntu-ssh.version" . }}"
+appVersion: "{{ include "ubuntu-ssh.version" . }}"
 home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
 sources:
   - https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh

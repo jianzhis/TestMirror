@@ -18,20 +18,15 @@
         },
         "tag": {
           "type": "string",
-          "title": "镜像标签",
-          "default": "latest"
+          "title": "Ubuntu 版本",
+          "description": "选择 Ubuntu 版本，例如 '20.04' 或 '22.04'",
+          "default": "20.04",
+          "enum": ["20.04", "22.04"]
         },
         "pullPolicy": {
           "type": "string",
           "title": "镜像拉取策略",
           "default": "IfNotPresent"
-        },
-        "ubuntuVersion": {
-          "type": "string",
-          "title": "Ubuntu 版本",
-          "description": "选择 Ubuntu 的版本，例如 '20.04', '22.04' 或 'latest'",
-          "default": "latest",
-          "enum": ["latest", "22.04", "20.04"]
         }
       }
     },

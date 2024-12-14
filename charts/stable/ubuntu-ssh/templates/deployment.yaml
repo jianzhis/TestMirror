@@ -4,7 +4,6 @@ metadata:
   name: {{ include "ubuntu-ssh.fullname" . }}
   labels:
     {{- include "ubuntu-ssh.labels" . | nindent 4 }}
-    chart-version: "{{ .Chart.Version }}" # 添加 Chart 版本信息
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
