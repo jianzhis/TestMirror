@@ -14,26 +14,6 @@ spec:
       labels:
         {{- include "ubuntu-ssh.selectorLabels" . | nindent 8 }}
     spec:
-      initContainers:
-        - name: init-ssh-tools
-          image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          command:
-            - /bin/bash
-            - -c
-            - |
-              echo "Initializing container with essential tools and SSH setup." && \
-              sed -i 's@http://archive.ubuntu.com/@http://mirrors.aliyun.com/@g' /etc/apt/sources.list && \
-              apt-get update && \
-              apt-get install -y \
-                vim \
-                net-tools \
-                curl \
-                wget \
-                iputils-ping \
-                git \
-                nano \
-                openssh-server && \
-              mkdir -p /run/sshd
       containers:
         - name: ubuntu-ssh
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -45,8 +25,33 @@ spec:
             - name: {{ .Values.env.env2.name }}
               value: {{ .Values.env.env2.value | quote }}
           command:
-            - /usr/sbin/sshd
-            - -D
+            - /bin/bash
+            - -c
+            - |
+              # 替换为国内源
+              sed -i 's@http://archive.ubuntu.com/@http://mirrors.aliyun.com/@g' /etc/apt/sources.list && \
+              apt-get update && \
+              
+              # 安装常用工具和 SSH 服务
+              apt-get install -y \
+                vim \
+                net-tools \
+                curl \
+                wget \
+                iputils-ping \
+                git \
+                nano \
+                openssh-server && \
+              
+              # 设置 root 用户密码
+              echo "root:yunna" | chpasswd && \
+              
+              # 修改 SSH 配置
+              sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
+              sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
+    
+              #  # 启动 SSH 服务
+              /usr/sbin/sshd -D
           lifecycle:
             postStart:
               exec:
@@ -54,7 +59,7 @@ spec:
                   - /bin/bash
                   - -c
                   - |
-                    echo "Container started. SSH server and essential tools are ready."
+                    echo "SSH server and essential tools installed."
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
