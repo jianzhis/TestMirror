@@ -24,6 +24,9 @@ persistence:
   size: 1Gi
   storageClass: "local"
 
+network:
+  egressLimit: "10Mbps"
+
 env:
   env1:
     name: TZ
