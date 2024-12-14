@@ -28,12 +28,28 @@ spec:
             - /bin/bash
             - -c
             - |
+              # 安装 SSH 服务
               apt-get update && \
               apt-get install -y openssh-server && \
               mkdir -p /var/run/sshd && \
+              
+              # 设置 root 用户密码
               echo "root:password" | chpasswd && \
+              
+              # 修改 SSH 配置
               sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
+              sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
+              
+              # 启动 SSH 服务
               /usr/sbin/sshd -D
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/bash
+                  - -c
+                  - |
+                    echo "Starting SSH server"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
