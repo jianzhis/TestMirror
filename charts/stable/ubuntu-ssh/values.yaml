@@ -2,8 +2,8 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: ubuntu
-  tag: "22.04"
+  repository: ubuntu/ssh-tools
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
@@ -12,11 +12,11 @@ service:
 
 resources:
   limits:
-    cpu: 1000m
-    memory: 1024Mi
+    cpu: "1000m"
+    memory: "1024Mi"
   requests:
-    cpu: 500m
-    memory: 512Mi
+    cpu: "500m"
+    memory: "512Mi"
 
 persistence:
   enabled: true
@@ -26,8 +26,8 @@ persistence:
 
 env:
   env1:
-    name: ROOT_PASSWORD
-    value: "changeme"
+    name: TZ
+    value: Asia/Shanghai
   env2:
-    name: SSH_PORT
-    value: "22"
+    name: LANG
+    value: en_US.UTF-8

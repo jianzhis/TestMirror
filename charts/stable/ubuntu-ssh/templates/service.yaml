@@ -9,6 +9,3 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 22
-  selector:
-    app.kubernetes.io/name: {{ include "ubuntu-ssh.name" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}

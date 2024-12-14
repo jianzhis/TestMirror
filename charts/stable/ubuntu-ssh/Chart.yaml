@@ -1,19 +1,20 @@
 apiVersion: v2
 name: ubuntu-ssh
 description: |
-  该应用提供一个基于 Ubuntu 的 SSH 服务，支持基本的命令行工具和 SSH 连接，方便远程管理与操作。
+  一个基于 Ubuntu 的 Helm Chart，内置 SSH 服务及基本工具。
 version: 0.1.0
-appVersion: "22.04"
+appVersion: "latest"
 home: https://ubuntu.com
 sources:
-  - https://github.com/ubuntu/ubuntu
+  - https://github.com/ubuntu
 maintainers:
   - name: "niehaoran"
-    email: "niehaoran@yunna.com"
+    email: "niehaoran@yunna.net"
 annotations:
-  "yunna.net/category": "cloud"
-  "yunna.net/category-zh": "云服务"
+  "yunna.net/category": "system"
+  "yunna.net/category-zh": "系统"
 keywords:
   - ubuntu
   - ssh
+  - tools
 icon: "https://assets.yunna.net/i/2024/12/13/114s1hr.png"
