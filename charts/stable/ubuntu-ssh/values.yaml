@@ -48,8 +48,8 @@ persistence:
 
 advanced:
   sshConfig:
-    MaxAuthTries: 6
-    ClientAliveInterval: 300
+    MaxAuthTries: "6"  # 改为字符串
+    ClientAliveInterval: "300"  # 改为字符串
   extraPackages:
     - htop
     - nano
