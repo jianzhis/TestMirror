@@ -21,9 +21,9 @@ spec:
             - containerPort: 22
           env:
             - name: {{ .Values.env.env1.name }}
-              value: {{ .Values.env.env1.value }}
+              value: {{ .Values.env.env1.value | quote }}
             - name: {{ .Values.env.env2.name }}
-              value: {{ .Values.env.env2.value }}
+              value: {{ .Values.env.env2.value | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
