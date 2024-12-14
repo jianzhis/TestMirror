@@ -19,7 +19,6 @@
         "tag": {
           "type": "string",
           "title": "Ubuntu 版本",
-          "description": "选择 Ubuntu 版本，例如 '20.04' 或 '22.04'",
           "default": "20.04",
           "enum": ["20.04", "22.04"]
         },
