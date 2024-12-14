@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  imageRegistry: "docker.io"
+  imageRegistry: "registry-2.yunna.net"
   repository: ubuntu
   tag: "22.04"
   pullPolicy: IfNotPresent
