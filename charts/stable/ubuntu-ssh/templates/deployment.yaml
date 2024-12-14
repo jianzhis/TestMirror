@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "ubuntu-ssh.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.replicaCount | default 1 }}
   selector:
     matchLabels:
       {{- include "ubuntu-ssh.selectorLabels" . | nindent 6 }}
@@ -16,24 +16,26 @@ spec:
     spec:
       containers:
         - name: ubuntu-ssh
-          image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.imageRegistry | default "docker.io" }}/{{ .Values.image.repository | default "ubuntu" }}:{{ .Values.image.tag | default "latest" }}"
           ports:
             - containerPort: 22
+              name: ssh
           env:
-            - name: {{ .Values.env.env1.name }}
-              value: {{ .Values.env.env1.value | quote }}
-            - name: {{ .Values.env.env2.name }}
-              value: {{ .Values.env.env2.value | quote }}
+            {{- if .Values.env }}
+            - name: {{ .Values.env.env1.name | default "ENV1" }}
+              value: {{ .Values.env.env1.value | default "default_value1" | quote }}
+            - name: {{ .Values.env.env2.name | default "ENV2" }}
+              value: {{ .Values.env.env2.value | default "default_value2" | quote }}
+            {{- end }}
           command:
             - /bin/bash
             - -c
             - |
+              set -e
               # 替换为国内源
               sed -i 's@http://archive.ubuntu.com/@http://mirrors.aliyun.com/@g' /etc/apt/sources.list && \
               apt-get update && \
-              
-              # 安装常用工具和 SSH 服务
-              apt-get install -y \
+              apt-get install -y --no-install-recommends \
                 vim \
                 net-tools \
                 curl \
@@ -42,15 +44,10 @@ spec:
                 git \
                 nano \
                 openssh-server && \
-              
-              # 设置 root 用户密码
               echo "root:yunna" | chpasswd && \
-              
-              # 修改 SSH 配置
               sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
               sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
-    
-              #  # 启动 SSH 服务
+              mkdir -p /var/run/sshd && \
               /usr/sbin/sshd -D
           lifecycle:
             postStart:
