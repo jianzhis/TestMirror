@@ -10,8 +10,5 @@ spec:
     - port: {{ .Values.env.env2.value }}  # 修改为使用 .Values.env.env2.value 来获取 SSH_PORT 配置
       targetPort: ssh
       protocol: TCP
-      {{- if eq .Values.service.type "NodePort" }}
-      nodePort: {{ .Values.service.nodePort }}
-      {{- end }}
   selector:
     {{- include "ubuntu-ssh.selectorLabels" . | nindent 4 }}

@@ -34,7 +34,6 @@ basePackages:
 service:
   type: NodePort
   port: 22
-  nodePort: 30022
 
 # 安全配置
 securityContext:
