@@ -7,19 +7,23 @@ metadata:
 data:
   setup.sh: |
     #!/bin/bash
-    # 安装SSH服务和基础工具
-    apt-get update || exit 1
-    apt-get install -y openssh-server {{ join " " .Values.basePackages }} {{- if .Values.advanced.extraPackages }} {{ join " " .Values.advanced.extraPackages }} {{- end }} || exit 1
+    set -e  # 捕获错误并退出
 
-    # 配置SSH
+    # 更新源
+    apt-get update || { echo "Failed: apt-get update"; exit 1; }
+
+    # 安装基础工具和 SSH
+    apt-get install -y openssh-server {{ join " " .Values.basePackages }} {{- if .Values.advanced.extraPackages }} {{ join " " .Values.advanced.extraPackages }} {{- end }} || { echo "Failed: apt-get install"; exit 1; }
+
+    # 配置 SSH
     mkdir -p /var/run/sshd
-    echo 'root:{{ .Values.env.env1.value }}' | chpasswd
-    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin {{ .Values.env.env3.value }}/g' /etc/ssh/sshd_config
-    
-    # 应用额外SSH配置
+    echo 'root:{{ .Values.env.env1.value | default "defaultpassword" }}' | chpasswd || { echo "Failed: setting root password"; exit 1; }
+    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin {{ .Values.env.env3.value | default "yes" }}/g' /etc/ssh/sshd_config || { echo "Failed: configuring PermitRootLogin"; exit 1; }
+
+    # 应用附加配置
     {{- range $key, $value := .Values.advanced.sshConfig }}
-    echo "{{ $key }} {{ $value }}" >> /etc/ssh/sshd_config
+    echo "{{ $key }} {{ $value }}" >> /etc/ssh/sshd_config || { echo "Failed: appending SSH config"; exit 1; }
     {{- end }}
-    
-    # 启动SSH服务
-    /usr/sbin/sshd -D
+
+    # 启动 SSH 服务
+    /usr/sbin/sshd -D || { echo "Failed: starting sshd"; exit 1; }
