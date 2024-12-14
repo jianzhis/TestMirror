@@ -2,6 +2,43 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
+    "replicaCount": {
+      "type": "integer",
+      "title": "副本数量",
+      "description": "需要运行的副本数量",
+      "minimum": 1,
+      "default": 1
+    },
+    "image": {
+      "type": "object",
+      "title": "镜像配置",
+      "properties": {
+        "imageRegistry": {
+          "type": "string",
+          "title": "镜像仓库",
+          "description": "镜像拉取地址",
+          "default": "registry-2.yunna.net"
+        },
+        "repository": {
+          "type": "string",
+          "title": "镜像名称",
+          "description": "镜像的路径",
+          "default": "ubuntu"
+        },
+        "tag": {
+          "type": "string",
+          "title": "镜像版本标签",
+          "description": "如果为空，将根据 global.ubuntuVersion 自动设置",
+          "default": ""
+        },
+        "pullPolicy": {
+          "type": "string",
+          "title": "镜像拉取策略",
+          "enum": ["Always", "IfNotPresent", "Never"],
+          "default": "IfNotPresent"
+        }
+      }
+    },
     "global": {
       "type": "object",
       "properties": {
@@ -31,7 +68,8 @@
               "type": "string",
               "title": "Root密码值",
               "description": "SSH root用户密码",
-              "minLength": 8
+              "minLength": 8,
+              "default": "changeme"
             }
           }
         },
@@ -70,6 +108,129 @@
               "default": "true"
             }
           }
+        }
+      }
+    },
+    "basePackages": {
+      "type": "array",
+      "title": "基础工具包",
+      "description": "需要安装的基础工具列表",
+      "items": {
+        "type": "string"
+      },
+      "default": ["vim", "curl", "wget", "net-tools", "iputils-ping", "telnet"]
+    },
+    "service": {
+      "type": "object",
+      "title": "服务配置",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "服务类型",
+          "enum": ["ClusterIP", "NodePort", "LoadBalancer"],
+          "default": "ClusterIP"
+        },
+        "port": {
+          "type": "integer",
+          "title": "服务端口",
+          "description": "对外暴露的端口号",
+          "default": 22
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "title": "资源配置",
+      "properties": {
+        "limits": {
+          "type": "object",
+          "title": "资源限制",
+          "properties": {
+            "cpu": {
+              "type": "string",
+              "title": "CPU限制",
+              "pattern": "^[0-9]+m?$",
+              "default": "2000m"
+            },
+            "memory": {
+              "type": "string",
+              "title": "内存限制",
+              "pattern": "^[0-9]+(Mi|Gi)$",
+              "default": "2000Mi"
+            }
+          }
+        },
+        "requests": {
+          "type": "object",
+          "title": "资源请求",
+          "properties": {
+            "cpu": {
+              "type": "string",
+              "title": "CPU请求",
+              "pattern": "^[0-9]+m?$",
+              "default": "500m"
+            },
+            "memory": {
+              "type": "string",
+              "title": "内存请求",
+              "pattern": "^[0-9]+(Mi|Gi)$",
+              "default": "512Mi"
+            }
+          }
+        }
+      }
+    },
+    "persistence": {
+      "type": "object",
+      "title": "持久化存储",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "title": "启用持久化",
+          "default": true
+        },
+        "accessMode": {
+          "type": "string",
+          "title": "访问模式",
+          "enum": ["ReadWriteOnce", "ReadOnlyMany", "ReadWriteMany"],
+          "default": "ReadWriteOnce"
+        },
+        "size": {
+          "type": "string",
+          "title": "存储大小",
+          "pattern": "^[0-9]+(Mi|Gi)$",
+          "default": "10Gi"
+        },
+        "storageClass": {
+          "type": "string",
+          "title": "存储类",
+          "default": "local"
+        }
+      }
+    },
+    "advanced": {
+      "type": "object",
+      "title": "高级配置",
+      "properties": {
+        "sshConfig": {
+          "type": "object",
+          "title": "附加SSH配置",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {
+            "MaxAuthTries": "6",
+            "ClientAliveInterval": "300"
+          }
+        },
+        "extraPackages": {
+          "type": "array",
+          "title": "附加包",
+          "description": "需要额外安装的工具包",
+          "items": {
+            "type": "string"
+          },
+          "default": ["htop", "nano"]
         }
       }
     }

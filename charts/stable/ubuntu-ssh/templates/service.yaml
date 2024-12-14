@@ -8,7 +8,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.env.env2.value }}
+      targetPort: {{ .Values.service.port }}
       protocol: TCP
   selector:
     {{- include "ubuntu-ssh.selectorLabels" . | nindent 4 }}

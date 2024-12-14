@@ -18,7 +18,7 @@ env:  # 环境变量
     value: "22"
   env3:
     name: PERMIT_ROOT_LOGIN
-    value: "yes"
+    value: "true"
 
 basePackages:
   - vim
