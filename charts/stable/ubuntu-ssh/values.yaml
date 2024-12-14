@@ -32,7 +32,7 @@ basePackages:
   - telnet
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 22
 
 # 安全配置
