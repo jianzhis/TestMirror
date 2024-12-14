@@ -7,20 +7,19 @@ replicaCount: 1
 image:
   imageRegistry: "registry-2.yunna.net"
   repository: ubuntu
-  # tag 会根据 global.ubuntuVersion 自动设置
-  tag: ""
+  tag: ""  # tag 会根据 global.ubuntuVersion 自动设置
   pullPolicy: IfNotPresent
 
-env:                         # 环境变量
+env:
   env1:
     name: ROOT_PASSWORD
-    value: "changeme"
+    value: "changeme"  # 默认 root 用户密码
   env2:
     name: SSH_PORT
-    value: "22"
+    value: "22"  # 默认 SSH 服务端口
   env3:
     name: PERMIT_ROOT_LOGIN
-    value: "true"
+    value: "true"  # 是否允许 root 登录
 
 # 基础工具配置
 basePackages:
@@ -32,8 +31,8 @@ basePackages:
   - telnet
 
 service:
-  type: ClusterIP
-  port: 22
+  type: ClusterIP  # Service 类型，默认集群内访问
+  port: 22  # SSH 服务端口
 
 # 安全配置
 securityContext:
@@ -57,12 +56,11 @@ persistence:
   size: 10Gi
   storageClass: "local"
   
-# 高级配置  
+# 高级配置
 advanced:
-  sshConfig: {}
-    # MaxAuthTries: 6
-    # ClientAliveInterval: 300
-  extraPackages: []
-    # - vim
-    # - curl
-    # - wget
+  sshConfig:
+    MaxAuthTries: 6
+    ClientAliveInterval: 300
+  extraPackages:
+    - htop
+    - nano
