@@ -16,10 +16,12 @@ data:
     echo 'root:{{ .Values.env.env1.value }}' | chpasswd
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin {{ .Values.env.env3.value }}/g' /etc/ssh/sshd_config
     
-    # 创建额外用户
+    # 创建额外用户，如果执行extraUsers定义存在
+    {{- if .Values.ssh.extraUsers }}
     {{- range .Values.ssh.extraUsers }}
     useradd -m -s /bin/bash {{ .username }}
     echo '{{ .username }}:{{ .password }}' | chpasswd
+    {{- end }}
     {{- end }}
     
     # 应用额外SSH配置
