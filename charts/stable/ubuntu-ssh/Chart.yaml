@@ -1,20 +1,20 @@
 apiVersion: v2
 name: ubuntu-ssh
 description: |
-  一个带有 SSH 服务和常用工具的 Ubuntu 镜像应用。
-version: 0.1.0
-appVersion: "latest"
+  基于 Ubuntu 的 Helm Chart，内置 SSH 服务和常用工具。
+version: 20.04 # 默认与 Ubuntu 版本对应
+appVersion: "{{ .Values.image.tag }}" # 动态获取 values.yaml 中的 tag
 home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
 sources:
-  - 无
+  - https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
 maintainers:
   - name: "niehaoran"
     email: "niehaoran@yunna.net"
 annotations:
-  "yunna.net/category": "system-tools"
+  "yunna.net/category": "system"
   "yunna.net/category-zh": "系统工具"
 keywords:
-  - ubuntu
   - ssh
-  - tools
+  - ubuntu
+  - helm chart
 icon: "https://assets.yunna.net/i/2024/12/13/114s1hr.png"

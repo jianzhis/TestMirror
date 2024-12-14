@@ -1,9 +1,8 @@
 image:
   imageRegistry: "registry-2.yunna.net"
   repository: nidexiong/ubuntu-ssh
-  tag: "latest"
+  tag: "20.04" # 默认值为 Ubuntu 20.04
   pullPolicy: IfNotPresent
-  ubuntuVersion: "latest" # 默认值，可以选择 "20.04" 或 "22.04"
 
 service:
   type: ClusterIP

@@ -4,6 +4,7 @@ metadata:
   name: {{ include "ubuntu-ssh.fullname" . }}
   labels:
     {{- include "ubuntu-ssh.labels" . | nindent 4 }}
+    chart-version: "{{ .Chart.Version }}" # 添加 Chart 版本信息
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -18,9 +19,6 @@ spec:
         - name: ubuntu-ssh
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-            - name: UBUNTU_VERSION
-              value: "{{ .Values.image.ubuntuVersion }}" # 将 Ubuntu 版本作为环境变量传递
           ports:
             - containerPort: {{ .Values.service.port }}
           command:
