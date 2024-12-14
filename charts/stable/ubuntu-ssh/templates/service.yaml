@@ -7,8 +7,8 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.env.env2.value }}  # 修改为使用 .Values.env.env2.value 来获取 SSH_PORT 配置
-      targetPort: ssh
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.env.env2.value }}
       protocol: TCP
   selector:
     {{- include "ubuntu-ssh.selectorLabels" . | nindent 4 }}
