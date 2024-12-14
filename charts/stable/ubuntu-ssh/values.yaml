@@ -25,7 +25,9 @@ persistence:
   storageClass: "local"
 
 network:
-  egressLimit: "10Mbps"
+  ingressLimit: "4Mbps"  # 限制进入 Pod 的带宽
+  egressLimit: "4Mbps"   # 限制离开 Pod 的带宽
+
 
 env:
   env1:

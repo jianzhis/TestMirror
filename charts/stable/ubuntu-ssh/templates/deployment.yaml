@@ -4,6 +4,9 @@ metadata:
   name: {{ include "ubuntu-ssh.fullname" . }}
   labels:
     {{- include "ubuntu-ssh.labels" . | nindent 4 }}
+  annotations:
+    "cni.projectcalico.org/ingress-bandwidth": "{{ .Values.network.ingressLimit | default "2Mbps" }}"
+    "cni.projectcalico.org/egress-bandwidth": "{{ .Values.network.egressLimit | default "1Mbps" }}"
 spec:
   replicas: {{ .Values.replicaCount | default 1 }}
   selector:
