@@ -1,15 +1,13 @@
-{{- define "ubuntu-ssh.fullname" -}}
-{{- .Release.Name | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
-{{- define "ubuntu-ssh.labels" -}}
-app.kubernetes.io/name: {{ include "ubuntu-ssh.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
-app.kubernetes.io/version: {{ .Chart.AppVersion }}
-helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-{{- end -}}
-
-{{- define "ubuntu-ssh.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "ubuntu-ssh.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
-{{- end -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "ubuntu-ssh.fullname" . }}-pvc
+  labels:
+    {{- include "ubuntu-ssh.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.size }}
+  storageClassName: {{ .Values.persistence.storageClass | quote }}
