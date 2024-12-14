@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "ubuntu-ssh.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount | default 1 }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       {{- include "ubuntu-ssh.selectorLabels" . | nindent 6 }}
@@ -16,47 +16,13 @@ spec:
     spec:
       containers:
         - name: ubuntu-ssh
-          image: "{{ .Values.image.imageRegistry | default "docker.io" }}/{{ .Values.image.repository | default "ubuntu" }}:{{ .Values.image.tag | default "latest" }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 22
-              name: ssh
-          env:
-            {{- if .Values.env }}
-            - name: {{ .Values.env.env1.name | default "ENV1" }}
-              value: {{ .Values.env.env1.value | default "default_value1" | quote }}
-            - name: {{ .Values.env.env2.name | default "ENV2" }}
-              value: {{ .Values.env.env2.value | default "default_value2" | quote }}
-            {{- end }}
+            - containerPort: {{ .Values.service.port }}
           command:
-            - /bin/bash
-            - -c
-            - |
-              set -e
-              # 替换为国内源
-              sed -i 's@http://archive.ubuntu.com/@http://mirrors.aliyun.com/@g' /etc/apt/sources.list && \
-              apt-get update && \
-              apt-get install -y --no-install-recommends \
-                vim \
-                net-tools \
-                curl \
-                wget \
-                iputils-ping \
-                git \
-                nano \
-                openssh-server && \
-              echo "root:yunna" | chpasswd && \
-              sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
-              sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
-              mkdir -p /var/run/sshd && \
-              /usr/sbin/sshd -D
-          lifecycle:
-            postStart:
-              exec:
-                command:
-                  - /bin/bash
-                  - -c
-                  - |
-                    echo "SSH server and essential tools installed."
+            - /usr/sbin/sshd
+            - -D
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:

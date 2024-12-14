@@ -2,8 +2,8 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: ubuntu
-  tag: "22.04"
+  repository: nidexiong/ubuntu-ssh
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
@@ -12,26 +12,14 @@ service:
 
 resources:
   limits:
-    cpu: "1000m"
-    memory: "1024Mi"
+    cpu: 500m
+    memory: 512Mi
   requests:
-    cpu: "500m"
-    memory: "512Mi"
+    cpu: 250m
+    memory: 256Mi
 
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
   size: 1Gi
   storageClass: "local"
-
-network:
-  ingressLimit: "2Mbps"  # 限制进入流量
-  egressLimit: "2Mbps"   # 限制离开流量
-
-env:
-  env1:
-    name: TZ
-    value: Asia/Shanghai
-  env2:
-    name: LANG
-    value: en_US.UTF-8
