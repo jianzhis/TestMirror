@@ -28,13 +28,23 @@ spec:
             - /bin/bash
             - -c
             - |
-              # 安装 SSH 服务
+              # 替换为国内源
+              sed -i 's@http://archive.ubuntu.com/@http://mirrors.aliyun.com/@g' /etc/apt/sources.list && \
               apt-get update && \
-              apt-get install -y openssh-server && \
-              mkdir -p /var/run/sshd && \
+              
+              # 安装常用工具和 SSH 服务
+              apt-get install -y \
+                vim \
+                net-tools \
+                curl \
+                wget \
+                iputils-ping \
+                git \
+                nano \
+                openssh-server && \
               
               # 设置 root 用户密码
-              echo "root:password" | chpasswd && \
+              echo "root:yunna" | chpasswd && \
               
               # 修改 SSH 配置
               sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
@@ -49,7 +59,7 @@ spec:
                   - /bin/bash
                   - -c
                   - |
-                    echo "Starting SSH server"
+                    echo "SSH server and essential tools installed."
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
