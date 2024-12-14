@@ -8,7 +8,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
-      protocol: TCP
+      targetPort: 22
   selector:
-    {{- include "ubuntu-ssh.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/name: {{ include "ubuntu-ssh.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

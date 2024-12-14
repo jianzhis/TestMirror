@@ -5,142 +5,13 @@
     "replicaCount": {
       "type": "integer",
       "title": "副本数量",
-      "description": "需要运行的副本数量",
+      "description": "要部署的副本数量",
       "minimum": 1,
       "default": 1
     },
-    "image": {
-      "type": "object",
-      "title": "镜像配置",
-      "properties": {
-        "imageRegistry": {
-          "type": "string",
-          "title": "镜像仓库",
-          "description": "镜像拉取地址",
-          "default": "registry-2.yunna.net"
-        },
-        "repository": {
-          "type": "string",
-          "title": "镜像名称",
-          "description": "镜像的路径",
-          "default": "ubuntu"
-        },
-        "tag": {
-          "type": "string",
-          "title": "镜像版本标签",
-          "description": "如果为空，将根据 global.ubuntuVersion 自动设置",
-          "default": ""
-        },
-        "pullPolicy": {
-          "type": "string",
-          "title": "镜像拉取策略",
-          "enum": ["Always", "IfNotPresent", "Never"],
-          "default": "IfNotPresent"
-        }
-      }
-    },
-    "global": {
-      "type": "object",
-      "properties": {
-        "ubuntuVersion": {
-          "type": "string",
-          "title": "Ubuntu版本",
-          "description": "选择Ubuntu版本",
-          "enum": ["20.04", "22.04", "23.04"],
-          "default": "22.04"
-        }
-      }
-    },
-    "env": {
-      "type": "object",
-      "title": "环境变量",
-      "properties": {
-        "env1": {
-          "type": "object",
-          "title": "Root密码",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "ROOT_PASSWORD"
-            },
-            "value": {
-              "type": "string",
-              "title": "Root密码值",
-              "description": "SSH root用户密码",
-              "minLength": 8,
-              "default": "changeme"
-            }
-          }
-        },
-        "env2": {
-          "type": "object",
-          "title": "SSH端口",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "SSH_PORT"
-            },
-            "value": {
-              "type": "string",
-              "title": "端口值",
-              "description": "SSH服务端口",
-              "pattern": "^[0-9]+$",
-              "default": "22"
-            }
-          }
-        },
-        "env3": {
-          "type": "object",
-          "title": "Root登录权限",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "PERMIT_ROOT_LOGIN"
-            },
-            "value": {
-              "type": "string",
-              "title": "允许Root登录",
-              "description": "是否允许root用户SSH登录",
-              "enum": ["true", "false"],
-              "default": "true"
-            }
-          }
-        }
-      }
-    },
-    "basePackages": {
-      "type": "array",
-      "title": "基础工具包",
-      "description": "需要安装的基础工具列表",
-      "items": {
-        "type": "string"
-      },
-      "default": ["vim", "curl", "wget", "net-tools", "iputils-ping", "telnet"]
-    },
-    "service": {
-      "type": "object",
-      "title": "服务配置",
-      "properties": {
-        "type": {
-          "type": "string",
-          "title": "服务类型",
-          "enum": ["ClusterIP", "NodePort", "LoadBalancer"],
-          "default": "ClusterIP"
-        },
-        "port": {
-          "type": "integer",
-          "title": "服务端口",
-          "description": "对外暴露的端口号",
-          "default": 22
-        }
-      }
-    },
     "resources": {
       "type": "object",
-      "title": "资源配置",
+      "title": "资源需求",
       "properties": {
         "limits": {
           "type": "object",
@@ -150,13 +21,13 @@
               "type": "string",
               "title": "CPU限制",
               "pattern": "^[0-9]+m?$",
-              "default": "2000m"
+              "default": "1000m"
             },
             "memory": {
               "type": "string",
               "title": "内存限制",
               "pattern": "^[0-9]+(Mi|Gi)$",
-              "default": "2000Mi"
+              "default": "1024Mi"
             }
           }
         },
@@ -182,7 +53,7 @@
     },
     "persistence": {
       "type": "object",
-      "title": "持久化存储",
+      "title": "持久化配置",
       "properties": {
         "enabled": {
           "type": "boolean",
@@ -199,7 +70,7 @@
           "type": "string",
           "title": "存储大小",
           "pattern": "^[0-9]+(Mi|Gi)$",
-          "default": "10Gi"
+          "default": "1Gi"
         },
         "storageClass": {
           "type": "string",
@@ -208,29 +79,41 @@
         }
       }
     },
-    "advanced": {
+    "env": {
       "type": "object",
-      "title": "高级配置",
+      "title": "环境变量",
       "properties": {
-        "sshConfig": {
+        "env1": {
           "type": "object",
-          "title": "附加SSH配置",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "default": {
-            "MaxAuthTries": "6",
-            "ClientAliveInterval": "300"
+          "title": "环境变量1",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "ROOT_PASSWORD"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "changeme"
+            }
           }
         },
-        "extraPackages": {
-          "type": "array",
-          "title": "附加包",
-          "description": "需要额外安装的工具包",
-          "items": {
-            "type": "string"
-          },
-          "default": ["htop", "nano"]
+        "env2": {
+          "type": "object",
+          "title": "环境变量2",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "SSH_PORT"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "22"
+            }
+          }
         }
       }
     }

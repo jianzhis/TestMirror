@@ -16,24 +16,18 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.global.ubuntuVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/bash"]
-          args: ["/config/setup.sh"]
-          ports:
-            - containerPort: {{ .Values.env.env2.value }}
-              protocol: TCP
+          image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           env:
             - name: {{ .Values.env.env1.name }}
-              value: {{ .Values.env.env1.value | quote }}
+              value: {{ .Values.env.env1.value }}
             - name: {{ .Values.env.env2.name }}
-              value: {{ .Values.env.env2.value | quote }}
-            - name: {{ .Values.env.env3.name }}
-              value: {{ .Values.env.env3.value | quote }}
+              value: {{ .Values.env.env2.value }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: ssh-config
-              mountPath: /config
+            - name: data
+              mountPath: /data
       volumes:
-        - name: ssh-config
-          configMap:
-            name: {{ include "ubuntu-ssh.fullname" . }}
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ include "ubuntu-ssh.fullname" . }}-pvc

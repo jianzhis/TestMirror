@@ -1,32 +1,10 @@
 replicaCount: 1
 
 image:
-  imageRegistry: "registry-2.yunna.net"  # 默认使用官方 Docker Hub
-  repository: "ubuntu"  # 官方 Ubuntu 镜像
-  tag: ""  # 自动根据 global.ubuntuVersion 设置
+  imageRegistry: "registry-2.yunna.net"
+  repository: ubuntu
+  tag: "22.04"
   pullPolicy: IfNotPresent
-
-global:
-  ubuntuVersion: "22.04"  # 支持 20.04, 22.04, 23.04
-
-env:  # 环境变量
-  env1:
-    name: ROOT_PASSWORD
-    value: "changeme"
-  env2:
-    name: SSH_PORT
-    value: "22"
-  env3:
-    name: PERMIT_ROOT_LOGIN
-    value: "true"
-
-basePackages:
-  - vim
-  - curl
-  - wget
-  - net-tools
-  - iputils-ping
-  - telnet
 
 service:
   type: ClusterIP
@@ -34,8 +12,8 @@ service:
 
 resources:
   limits:
-    cpu: 2000m
-    memory: 2000Mi
+    cpu: 1000m
+    memory: 1024Mi
   requests:
     cpu: 500m
     memory: 512Mi
@@ -43,13 +21,13 @@ resources:
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 10Gi
+  size: 1Gi
   storageClass: "local"
 
-advanced:
-  sshConfig:
-    MaxAuthTries: "6"  # 改为字符串
-    ClientAliveInterval: "300"  # 改为字符串
-  extraPackages:
-    - htop
-    - nano
+env:
+  env1:
+    name: ROOT_PASSWORD
+    value: "changeme"
+  env2:
+    name: SSH_PORT
+    value: "22"
