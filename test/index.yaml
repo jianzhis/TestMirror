@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-14T13:52:11.685366693Z"
+    created: "2024-12-14T13:57:22.900931132Z"
     description: 'MCSManager 是一个开源的 Minecraft 服务器管理面板，支持多服务器管理、在线控制台、文件管理、账号权限等功能。 '
-    digest: 39a14aad605fd4b034b27d1856e80724f116a7c1854a51dee65fcd78d7e990cc
+    digest: f6c42ff825b8db1ff54ffb27572c492d802404dccd002c4668a841b4604cc9e6
     home: https://mcsmanager.com/
     icon: https://assets.yunna.net/i/2024/12/13/sp7ioh.png
     keywords:
@@ -27,10 +27,10 @@ entries:
       yunna.net/category-zh: 游戏服务器
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-14T13:52:11.685767513Z"
+    created: "2024-12-14T13:57:22.901335109Z"
     description: 'Minecraft 是一款广受欢迎的沙盒游戏，玩家可以在其中探索、建造、合作与战斗。  本 部署 Minecraft 服务器，为玩家提供多人在线游戏世界，并支持自定义插件、模组和配置，满足社区服务器和私人服务器需求。
       该服务器支持官方版和 Forge、Paper 等模组版，为玩家提供丰富的游戏体验。 '
-    digest: cd2ca2fce18ae1af846bc41a4a339f41bf7979e2367ef4b92498b1e7a7094620
+    digest: a5a483962ae700c3cc1c1e12c38dc8f87f4c2f0a5c1a445132c1e574840af1b4
     home: https://www.minecraft.net/
     icon: https://assets.yunna.net/i/2024/12/13/sqhneo.png
     keywords:
@@ -55,10 +55,10 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: "22.04"
-    created: "2024-12-14T13:52:11.686146983Z"
+    created: "2024-12-14T13:57:22.903111597Z"
     description: '基于官方 Ubuntu 镜像的 SSH 服务器。 支持多个 Ubuntu 版本(20.04/22.04/23.04)，预装 OpenSSH
       服务。 可用于远程管理、开发环境或作为跳板机使用。 '
-    digest: 65a2ab647a675c1e795647ebfa0908ab6002687c9bf1efbd1fd4f946a91f0766
+    digest: 461880df24eeab7cc937b62a85c51e2bc5c48437091fdddce62a03e52b85c567
     home: https://ubuntu.com/
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -80,10 +80,10 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-14T13:52:11.687055273Z"
+    created: "2024-12-14T13:57:22.9034759Z"
     description: 'Uptime Kuma 是一个开源、轻量的自托管监控工具，支持对网站、服务器和 API 的正常运行时间进行实时监控，帮助用户快速了解服务的运行状况。它提供友好的用户界面、支持多种通知方式（如邮件、Telegram、Slack
       等）以及历史记录追踪功能。 '
-    digest: 0836996bbb55bf40ae0011d60f1d63cea9094a0f6d065e8497e5904ddb66789b
+    digest: 00849a5a7697c6a6dc81aeaaab66c2d981695601ef31bf28e04f53e07373ea4e
     home: https://github.com/louislam/uptime-kuma
     icon: https://assets.yunna.net/i/2024/12/13/sr129s.png
     keywords:
@@ -100,4 +100,4 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/uptime-kuma-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-14T13:52:11.684877157Z"
+generated: "2024-12-14T13:57:22.900432329Z"
