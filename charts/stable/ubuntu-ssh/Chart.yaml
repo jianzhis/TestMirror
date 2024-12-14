@@ -1,20 +1,19 @@
 apiVersion: v2
 name: ubuntu-ssh
 description: |
-  一个支持多版本的 Ubuntu 镜像，预装 SSH 服务和基础工具，可用于远程管理和开发。
+  该应用提供一个基于 Ubuntu 的 SSH 服务，支持基本的命令行工具和 SSH 连接，方便远程管理与操作。
 version: 0.1.0
 appVersion: "22.04"
-home: https://hub.docker.com/_/ubuntu
+home: https://ubuntu.com
 sources:
-  - https://github.com/ubuntu/ubuntu-docker
+  - https://github.com/ubuntu/ubuntu
 maintainers:
   - name: "niehaoran"
-    email: "niehaoran@yunna.net"
+    email: "niehaoran@yunna.com"
 annotations:
-  "yunna.net/category": "development"
-  "yunna.net/category-zh": "开发工具"
+  "yunna.net/category": "cloud"
+  "yunna.net/category-zh": "云服务"
 keywords:
   - ubuntu
   - ssh
-  - development
 icon: "https://assets.yunna.net/i/2024/12/13/114s1hr.png"

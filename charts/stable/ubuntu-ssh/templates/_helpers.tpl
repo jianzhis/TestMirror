@@ -2,6 +2,10 @@
 {{- .Release.Name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
+{{- define "ubuntu-ssh.name" -}}
+{{- .Chart.Name -}}
+{{- end -}}
+
 {{- define "ubuntu-ssh.labels" -}}
 app.kubernetes.io/name: {{ include "ubuntu-ssh.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
