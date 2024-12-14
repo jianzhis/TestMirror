@@ -9,3 +9,5 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 22
+  selector:
+    {{- include "ubuntu-ssh.selectorLabels" . | nindent 4 }}
