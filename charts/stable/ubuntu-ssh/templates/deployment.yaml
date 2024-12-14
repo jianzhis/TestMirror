@@ -49,8 +49,8 @@ spec:
               # 修改 SSH 配置
               sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
               sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
-              
-              # 启动 SSH 服务
+    
+              #  # 启动 SSH 服务
               /usr/sbin/sshd -D
           lifecycle:
             postStart:
