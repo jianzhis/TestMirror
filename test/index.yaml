@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-14T17:13:23.885271721Z"
+    created: "2024-12-14T17:18:08.385167419Z"
     description: 'MCSManager 是一个开源的 Minecraft 服务器管理面板，支持多服务器管理、在线控制台、文件管理、账号权限等功能。 '
-    digest: 6e9718955db079b9c9412aeb33c3cde254d47da5cf13a81152a0cda795248021
+    digest: c56584165569e55939fc8b8efbdbf04831dfe4744998985388e3150404e4d239
     home: https://mcsmanager.com/
     icon: https://assets.yunna.net/i/2024/12/13/sp7ioh.png
     keywords:
@@ -27,10 +27,10 @@ entries:
       yunna.net/category-zh: 游戏服务器
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-14T17:13:23.88568457Z"
+    created: "2024-12-14T17:18:08.385918204Z"
     description: 'Minecraft 是一款广受欢迎的沙盒游戏，玩家可以在其中探索、建造、合作与战斗。  本 部署 Minecraft 服务器，为玩家提供多人在线游戏世界，并支持自定义插件、模组和配置，满足社区服务器和私人服务器需求。
       该服务器支持官方版和 Forge、Paper 等模组版，为玩家提供丰富的游戏体验。 '
-    digest: a2b0a3454daeb0713719cc1ada94acfe58efa4a5b8f5365a959259d7948abdbf
+    digest: 16ae8f521488dbb1c14b4d985357bf644979e412fcb24648ee2489e9bb9d4d1b
     home: https://www.minecraft.net/
     icon: https://assets.yunna.net/i/2024/12/13/sqhneo.png
     keywords:
@@ -55,9 +55,9 @@ entries:
       yunna.net/category-zh: 系统
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-14T17:13:23.885970331Z"
+    created: "2024-12-14T17:18:08.386419252Z"
     description: '一个基于 Ubuntu 的 Helm Chart，内置 SSH 服务及基本工具。 '
-    digest: 591219ef4a76510b5d9d9b6f0511b63d5e06c93ec84c7aad424c4802f0f87115
+    digest: 7edcc6a8c12ec96749c3b756349595ea7952d94b26f704583a7c263d7a51f65e
     home: https://ubuntu.com
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -79,10 +79,10 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-14T17:13:23.88629235Z"
+    created: "2024-12-14T17:18:08.387091139Z"
     description: 'Uptime Kuma 是一个开源、轻量的自托管监控工具，支持对网站、服务器和 API 的正常运行时间进行实时监控，帮助用户快速了解服务的运行状况。它提供友好的用户界面、支持多种通知方式（如邮件、Telegram、Slack
       等）以及历史记录追踪功能。 '
-    digest: 90ac4423160fa8912838be93e4400667e50ecf62aa5615f4402a409bcfd5ca71
+    digest: c7beab641e599bd7e044fa5462dd8f2335aba1c87fd40bc8951e1900c4fcf8f3
     home: https://github.com/louislam/uptime-kuma
     icon: https://assets.yunna.net/i/2024/12/13/sr129s.png
     keywords:
@@ -99,4 +99,4 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/uptime-kuma-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-14T17:13:23.884698274Z"
+generated: "2024-12-14T17:18:08.384267415Z"
