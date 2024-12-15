@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: "nidexiong/redis"
+  repository: "library/redis"
   tag: "latest"
   pullPolicy: IfNotPresent
 
