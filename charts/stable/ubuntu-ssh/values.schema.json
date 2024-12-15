@@ -5,72 +5,27 @@
     "replicaCount": {
       "type": "integer",
       "title": "副本数量",
-      "default": 1,
-      "minimum": 1
+      "description": "要部署的副本数量",
+      "minimum": 1,
+      "default": 1
     },
     "image": {
       "type": "object",
       "properties": {
-        "repository": {
-          "type": "string",
-          "title": "镜像仓库",
-          "default": "nidexiong/ubuntu-ssh"
-        },
-        "tag": {
-          "type": "string",
-          "title": "Ubuntu 版本",
-          "default": "20.04",
-          "enum": ["20.04", "22.04"]
-        },
-        "pullPolicy": {
-          "type": "string",
-          "title": "镜像拉取策略",
-          "default": "IfNotPresent"
-        }
+        "imageRegistry": { "type": "string", "default": "registry-2.yunna.net" },
+        "repository": { "type": "string", "default": "library/ubuntu-ssh" },
+        "tag": { "type": "string", "default": "latest" },
+        "pullPolicy": { "type": "string", "default": "IfNotPresent" }
       }
     },
-    "service": {
+    "env": {
       "type": "object",
       "properties": {
-        "type": {
-          "type": "string",
-          "title": "服务类型",
-          "default": "ClusterIP"
-        },
-        "port": {
-          "type": "integer",
-          "title": "服务端口",
-          "default": 22
-        }
-      }
-    },
-    "resources": {
-      "type": "object",
-      "properties": {
-        "limits": {
+        "env1": {
           "type": "object",
           "properties": {
-            "cpu": {
-              "type": "string",
-              "default": "500m"
-            },
-            "memory": {
-              "type": "string",
-              "default": "512Mi"
-            }
-          }
-        },
-        "requests": {
-          "type": "object",
-          "properties": {
-            "cpu": {
-              "type": "string",
-              "default": "250m"
-            },
-            "memory": {
-              "type": "string",
-              "default": "256Mi"
-            }
+            "name": { "type": "string", "default": "UBUNTU_VERSION" },
+            "value": { "type": "string", "default": "20.04" }
           }
         }
       }
@@ -78,22 +33,10 @@
     "persistence": {
       "type": "object",
       "properties": {
-        "enabled": {
-          "type": "boolean",
-          "default": true
-        },
-        "accessMode": {
-          "type": "string",
-          "default": "ReadWriteOnce"
-        },
-        "size": {
-          "type": "string",
-          "default": "1Gi"
-        },
-        "storageClass": {
-          "type": "string",
-          "default": "local"
-        }
+        "enabled": { "type": "boolean", "default": true },
+        "accessMode": { "type": "string", "default": "ReadWriteOnce" },
+        "size": { "type": "string", "default": "1Gi" },
+        "storageClass": { "type": "string", "default": "local" }
       }
     }
   }

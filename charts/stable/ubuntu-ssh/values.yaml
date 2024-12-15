@@ -1,7 +1,9 @@
+replicaCount: 1
+
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: nidexiong/ubuntu-ssh
-  tag: "20.04" # 默认值为 Ubuntu 20.04
+  repository: "nidexiong/ubuntu-ssh"
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
@@ -11,13 +13,18 @@ service:
 resources:
   limits:
     cpu: 1000m
-    memory: 1000Mi
+    memory: 1024Mi
   requests:
-    cpu: 250m
-    memory: 256Mi
+    cpu: 500m
+    memory: 512Mi
 
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 10Gi
+  size: 1Gi
   storageClass: "local"
+
+env:
+  env1:
+    name: "UBUNTU_VERSION"
+    value: "20.04"

@@ -16,13 +16,10 @@ spec:
     spec:
       containers:
         - name: ubuntu-ssh
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - containerPort: {{ .Values.service.port }}
-          command:
-            - /usr/sbin/sshd
-            - -D
+          image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            - name: {{ .Values.env.env1.name }}
+              value: {{ .Values.env.env1.value | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
