@@ -1,3 +1,7 @@
+{{- define "ubuntu-ssh.name" -}}
+{{- .Chart.Name -}}
+{{- end -}}
+
 {{- define "ubuntu-ssh.fullname" -}}
 {{- .Release.Name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
