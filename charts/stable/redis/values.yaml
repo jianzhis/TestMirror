@@ -2,9 +2,9 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: "_/redis"
-  tag: "latest"
-  pullPolicy: IfNotPresent
+  repository: "redis"                        # Redis 官方镜像名称
+  tag: "7.4.1"                               # 具体版本号，可以改为 `latest` 或其他版本
+  pullPolicy: IfNotPresent                   # 拉取策略
 
 service:
   type: ClusterIP
