@@ -1,0 +1,20 @@
+apiVersion: v2
+name: redis
+description: |
+  部署高可用 Redis 缓存服务，支持持久化存储和主从模式。
+version: 0.1.0
+appVersion: "6.2"
+home: https://redis.io/
+sources:
+  - https://github.com/redis/redis
+maintainers:
+  - name: "niehaoran"
+    email: "niehaoran@yunna.net"
+annotations:
+  "yunna.net/category": "database"
+  "yunna.net/category-zh": "数据库"
+keywords:
+  - redis
+  - cache
+  - database
+icon: "https://redis.io/images/redis-white.png"
