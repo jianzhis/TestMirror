@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-15T14:15:37.132657811Z"
+    created: "2024-12-15T14:38:43.050334225Z"
     description: 'MCSManager 是一个开源的 Minecraft 服务器管理面板，支持多服务器管理、在线控制台、文件管理、账号权限等功能。 '
-    digest: 37e079a18f669364dc08f0fc9b5e72fc5e77ba0f0d8f51974366789d5f49dfa5
+    digest: 1cb2aa8cd4721c4bbe68b406edc11aa5ae8b4377d3edb98fdfb4493a1937b8d9
     home: https://mcsmanager.com/
     icon: https://assets.yunna.net/i/2024/12/13/sp7ioh.png
     keywords:
@@ -27,10 +27,10 @@ entries:
       yunna.net/category-zh: 游戏服务器
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-15T14:15:37.133065766Z"
+    created: "2024-12-15T14:38:43.050739657Z"
     description: 'Minecraft 是一款广受欢迎的沙盒游戏，玩家可以在其中探索、建造、合作与战斗。  本 部署 Minecraft 服务器，为玩家提供多人在线游戏世界，并支持自定义插件、模组和配置，满足社区服务器和私人服务器需求。
       该服务器支持官方版和 Forge、Paper 等模组版，为玩家提供丰富的游戏体验。 '
-    digest: 3d90ee399fc1b772cd24bee66066f47514a42c5bd9b4d53a7dc809cbcd706492
+    digest: 2f4e2727305b83f193e7c7276018a465c653a78afc8abf9dc9789e71fc373194
     home: https://www.minecraft.net/
     icon: https://assets.yunna.net/i/2024/12/13/sqhneo.png
     keywords:
@@ -55,9 +55,9 @@ entries:
       yunna.net/category-zh: 消息队列
     apiVersion: v2
     appVersion: 3.12.0
-    created: "2024-12-15T14:15:37.133354167Z"
+    created: "2024-12-15T14:38:43.051064948Z"
     description: 'RabbitMQ 是一个功能强大的消息队列系统，用于跨分布式系统可靠传递消息。 '
-    digest: 9db26cac60ac4ab819966350831ed21a63363461af1a036f9e33f09a8d2f9884
+    digest: 6c6b5dda7c6c1f3cd2c6af15ac248514f5e612bd381c69424107874d2c0143ce
     home: https://www.rabbitmq.com
     icon: https://assets.yunna.net/i/2024/12/15/10iusta.png
     keywords:
@@ -78,9 +78,9 @@ entries:
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: "6.2"
-    created: "2024-12-15T14:15:37.133650774Z"
+    created: "2024-12-15T14:38:43.05136374Z"
     description: '部署高可用 Redis 缓存服务，支持持久化存储和主从模式。 '
-    digest: 38bf6054137765c7510588a3550ef70d7a24f26741883406e0cf84d9625966ae
+    digest: e831de1681170e20218ef0570f8201427b6c9f9426b960eb00a80fcafc951850
     home: https://redis.io/
     icon: https://assets.yunna.net/i/2024/12/11/ppvd2n.png
     keywords:
@@ -102,7 +102,7 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: '{{ .Values.image.tag }}'
-    created: "2024-12-15T14:15:37.134201246Z"
+    created: "2024-12-15T14:38:43.051906761Z"
     description: '基于 Ubuntu 的 Helm Chart，内置 SSH 服务和常用工具。 '
     digest: 5b5cca3e81c018a2ee3463493bb81a90342bb5369e817c5274fe8416a6edbf9b
     home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
@@ -125,9 +125,9 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-15T14:15:37.133920479Z"
+    created: "2024-12-15T14:38:43.051637245Z"
     description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
-    digest: 8a595129de8fb52896da43feb9144008c2bbfc0b9a1cff3153e7dfa338a57ef5
+    digest: 7d5a57621dd462afe9bcaa94eae76faef0e502dc289490a889b27ef567b5a860
     home: https://github.com/example/ubuntu-ssh
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -148,10 +148,10 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-15T14:15:37.134527177Z"
+    created: "2024-12-15T14:38:43.052249295Z"
     description: 'Uptime Kuma 是一个开源、轻量的自托管监控工具，支持对网站、服务器和 API 的正常运行时间进行实时监控，帮助用户快速了解服务的运行状况。它提供友好的用户界面、支持多种通知方式（如邮件、Telegram、Slack
       等）以及历史记录追踪功能。 '
-    digest: 46825bb8a639e96b58292106ab98c4e9aa9cb0b82f86b871ed79d17b9051439e
+    digest: 327f1e9861b6b0a7e8930191940406872c40f1807137226b2b23f1e3dbfb0f78
     home: https://github.com/louislam/uptime-kuma
     icon: https://assets.yunna.net/i/2024/12/13/sr129s.png
     keywords:
@@ -168,4 +168,4 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/uptime-kuma-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-15T14:15:37.132121856Z"
+generated: "2024-12-15T14:38:43.049800481Z"
