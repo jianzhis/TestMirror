@@ -20,6 +20,7 @@ spec:
           env:
             - name: "{{ .Values.env.env1.name | default "REDIS_PASSWORD" }}"
               value: "{{ .Values.env.env1.value | default "defaultpassword" }}"
+
           ports:
             - containerPort: 6379
           resources:
