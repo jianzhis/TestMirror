@@ -8,7 +8,7 @@ home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
 sources:
   - https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
 maintainers:
-  - name: "niehaoran"
+  - name: "xuan"
     email: "niehaoran@yunna.net"
 annotations:
   "yunna.net/category": "system"
