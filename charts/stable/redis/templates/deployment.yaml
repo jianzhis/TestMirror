@@ -21,7 +21,9 @@ spec:
             - name: "{{ .Values.env.env1.name | default "REDIS_PASSWORD" }}"
               value: "{{ .Values.env.env1.value | default "defaultpassword" }}"
           ports:
-            - containerPort: 6379
+            - name: redis-port
+              containerPort: 6379
+              protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
@@ -30,4 +32,4 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: {{ include "redis.fullname" . }}-pvc
+            claimName: "{{ include "redis.fullname" . }}-pvc"
