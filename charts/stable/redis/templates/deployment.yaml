@@ -18,8 +18,8 @@ spec:
         - name: redis
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           env:
-            - name: {{.REDIS_PASSWORD | quote }}
-              value: {{ .Values.env.REDIS_PASSWORD | quote }}
+            - name: {{ .Values.env.env1.name | quote }}
+              value: {{ .Values.env.env1.value | quote }}
           ports:
             - containerPort: 6379
           resources:
