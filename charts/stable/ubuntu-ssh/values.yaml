@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   imageRegistry: "registry-2.yunna.net"
   repository: "nidexiong/ubuntu-ssh"
-  tag: "latest"
+  tag: "20.04"
   pullPolicy: IfNotPresent
 
 service:
