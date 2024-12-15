@@ -3,7 +3,6 @@ replicaCount: 1
 image:
   imageRegistry: "registry-2.yunna.net"
   repository: "library/redis"
-  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
