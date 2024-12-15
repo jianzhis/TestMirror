@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: "bitnamicharts/redis"
+  repository: "nidexiong/redis"
   tag: "latest"
   pullPolicy: IfNotPresent
 
