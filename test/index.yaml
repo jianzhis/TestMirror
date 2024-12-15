@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-15T02:39:51.991007249Z"
+    created: "2024-12-15T14:15:37.132657811Z"
     description: 'MCSManager 是一个开源的 Minecraft 服务器管理面板，支持多服务器管理、在线控制台、文件管理、账号权限等功能。 '
-    digest: 38f596cd5c7c685d8372d4d38aab1459829d07216a681c48d4d07c62bf0ab40a
+    digest: 37e079a18f669364dc08f0fc9b5e72fc5e77ba0f0d8f51974366789d5f49dfa5
     home: https://mcsmanager.com/
     icon: https://assets.yunna.net/i/2024/12/13/sp7ioh.png
     keywords:
@@ -27,10 +27,10 @@ entries:
       yunna.net/category-zh: 游戏服务器
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-15T02:39:51.991401939Z"
+    created: "2024-12-15T14:15:37.133065766Z"
     description: 'Minecraft 是一款广受欢迎的沙盒游戏，玩家可以在其中探索、建造、合作与战斗。  本 部署 Minecraft 服务器，为玩家提供多人在线游戏世界，并支持自定义插件、模组和配置，满足社区服务器和私人服务器需求。
       该服务器支持官方版和 Forge、Paper 等模组版，为玩家提供丰富的游戏体验。 '
-    digest: 2a8213b8c81978b7f083550540532e16ed4752561ad47bce43d4679b005f12a0
+    digest: 3d90ee399fc1b772cd24bee66066f47514a42c5bd9b4d53a7dc809cbcd706492
     home: https://www.minecraft.net/
     icon: https://assets.yunna.net/i/2024/12/13/sqhneo.png
     keywords:
@@ -49,15 +49,38 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/minecraft-0.1.0.tgz
     version: 0.1.0
+  rabbitmq:
+  - annotations:
+      yunna.net/category: message-queue
+      yunna.net/category-zh: 消息队列
+    apiVersion: v2
+    appVersion: 3.12.0
+    created: "2024-12-15T14:15:37.133354167Z"
+    description: 'RabbitMQ 是一个功能强大的消息队列系统，用于跨分布式系统可靠传递消息。 '
+    digest: 9db26cac60ac4ab819966350831ed21a63363461af1a036f9e33f09a8d2f9884
+    home: https://www.rabbitmq.com
+    icon: https://assets.yunna.net/i/2024/12/15/10iusta.png
+    keywords:
+    - rabbitmq
+    - message-queue
+    maintainers:
+    - email: niehaoran@yunna.net
+      name: niehaoran
+    name: rabbitmq
+    sources:
+    - https://github.com/rabbitmq/rabbitmq-server
+    urls:
+    - https://jianzhis.github.io/TestMirror/test/rabbitmq-0.1.0.tgz
+    version: 0.1.0
   redis:
   - annotations:
       yunna.net/category: database
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: "6.2"
-    created: "2024-12-15T02:39:51.991691732Z"
+    created: "2024-12-15T14:15:37.133650774Z"
     description: '部署高可用 Redis 缓存服务，支持持久化存储和主从模式。 '
-    digest: 3bf1ae69a1458241dab2fa0e1e40799d4334b8084022a2d580df76d9066718b3
+    digest: 38bf6054137765c7510588a3550ef70d7a24f26741883406e0cf84d9625966ae
     home: https://redis.io/
     icon: https://assets.yunna.net/i/2024/12/11/ppvd2n.png
     keywords:
@@ -79,7 +102,7 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: '{{ .Values.image.tag }}'
-    created: "2024-12-15T02:39:51.992266159Z"
+    created: "2024-12-15T14:15:37.134201246Z"
     description: '基于 Ubuntu 的 Helm Chart，内置 SSH 服务和常用工具。 '
     digest: 5b5cca3e81c018a2ee3463493bb81a90342bb5369e817c5274fe8416a6edbf9b
     home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
@@ -102,9 +125,9 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-15T02:39:51.99198972Z"
+    created: "2024-12-15T14:15:37.133920479Z"
     description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
-    digest: fe5259cdd2ea8187c6959b2c14af9d29641e420df326013957f23cd3b81e4dc9
+    digest: 8a595129de8fb52896da43feb9144008c2bbfc0b9a1cff3153e7dfa338a57ef5
     home: https://github.com/example/ubuntu-ssh
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -125,10 +148,10 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-15T02:39:51.992601267Z"
+    created: "2024-12-15T14:15:37.134527177Z"
     description: 'Uptime Kuma 是一个开源、轻量的自托管监控工具，支持对网站、服务器和 API 的正常运行时间进行实时监控，帮助用户快速了解服务的运行状况。它提供友好的用户界面、支持多种通知方式（如邮件、Telegram、Slack
       等）以及历史记录追踪功能。 '
-    digest: 9f0b22b2d3e54a973039b455b8534fffd35ff2be68b4acd762ec628d1296fe55
+    digest: 46825bb8a639e96b58292106ab98c4e9aa9cb0b82f86b871ed79d17b9051439e
     home: https://github.com/louislam/uptime-kuma
     icon: https://assets.yunna.net/i/2024/12/13/sr129s.png
     keywords:
@@ -145,4 +168,4 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/uptime-kuma-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-15T02:39:51.990496953Z"
+generated: "2024-12-15T14:15:37.132121856Z"
