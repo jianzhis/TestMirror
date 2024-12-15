@@ -2,8 +2,10 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: "redis"
+  repository: "library/redis@sha256:fa84a527b1808ee5ad2778e5d89aae791e7040b5c303f1d45569a9ca8d5b61ee"
   pullPolicy: IfNotPresent
+
+
 
 service:
   type: ClusterIP
