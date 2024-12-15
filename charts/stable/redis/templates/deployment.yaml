@@ -18,12 +18,10 @@ spec:
         - name: redis
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           env:
-            - name: "{{ .Values.env.env1.name | default "REDIS_PASSWORD" }}"
-              value: "{{ .Values.env.env1.value | default "defaultpassword" }}"
+            - name: {{.REDIS_PASSWORD | quote }}
+              value: {{ .Values.env.REDIS_PASSWORD | quote }}
           ports:
-            - name: redis-port
-              containerPort: 6379
-              protocol: TCP
+            - containerPort: 6379
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
@@ -32,4 +30,4 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: "{{ include "redis.fullname" . }}-pvc"
+            claimName: {{ include "redis.fullname" . }}-pvc
