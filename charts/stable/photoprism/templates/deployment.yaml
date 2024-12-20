@@ -20,9 +20,11 @@ spec:
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: {{ .Values.service.protocol }}
+            {{- range .Values.services }}
+            - name: {{ .name }}
+              containerPort: {{ .port }}
+              protocol: {{ .protocol }}
+            {{- end }}
           env:
             {{- if kindIs "array" .Values.env }}
             {{- range .Values.env }}
