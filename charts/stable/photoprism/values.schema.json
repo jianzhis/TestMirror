@@ -43,6 +43,68 @@
         "repository"
       ]
     },
+    "service": {
+      "type": "object",
+      "title": "服务配置",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "服务类型",
+          "enum": [
+            "ClusterIP",
+            "NodePort",
+            "LoadBalancer"
+          ],
+          "default": "ClusterIP",
+          "description": "Kubernetes服务类型"
+        },
+        "port": {
+          "type": "integer",
+          "title": "服务端口",
+          "minimum": 1,
+          "maximum": 65535,
+          "default": 3001,
+          "description": "服务暴露的端口"
+        },
+        "targetPort": {
+          "type": "string",
+          "title": "目标端口",
+          "default": "http",
+          "description": "容器中的应用端口"
+        },
+        "protocol": {
+          "type": "string",
+          "title": "协议",
+          "enum": [
+            "TCP",
+            "UDP"
+          ],
+          "default": "TCP",
+          "description": "服务使用的协议"
+        },
+        "nodePort": {
+          "type": "integer",
+          "title": "节点端口",
+          "minimum": 30000,
+          "maximum": 32767,
+          "description": "NodePort类型服务的节点端口(可选)"
+        },
+        "annotations": {
+          "type": "object",
+          "title": "注解",
+          "description": "服务的Kubernetes注解",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "port",
+        "targetPort",
+        "protocol"
+      ]
+    },
     "resources": {
       "type": "object",
       "title": "资源需求",
@@ -121,7 +183,7 @@
       "type": "object",
       "title": "环境变量",
       "patternProperties": {
-        "^[A-Z][A-Z0-9_]*$": {
+        "^env[0-9]+$": {
           "type": "object",
           "properties": {
             "name": {
@@ -144,6 +206,7 @@
   },
   "required": [
     "replicaCount",
-    "image"
+    "image",
+    "service"
   ]
 }

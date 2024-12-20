@@ -7,10 +7,10 @@ home: https://photoprism.app/
 sources: []
 maintainers:
   - name: niehaoran
-    email: niehaoran@yunna.com
+    email: niehaoran@yunna.net
 annotations:
-  yunna.net/category: 管理工具
-  yunna.net/category-zh: management tool
+  yunna.net/category: management tool
+  yunna.net/category-zh: 管理工具
 keywords:
-  - 管理相片
+  - 管理照片
 icon: https://assets.yunna.net/i/2024/12/20/su26fz.png
