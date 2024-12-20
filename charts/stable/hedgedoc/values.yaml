@@ -7,11 +7,11 @@ image:
 services:
   - name: http
     port: 3000
-    targetPort: 3000
+    targetPort: "3000"
     protocol: TCP
   - name: metrics
     port: 9430
-    targetPort: 9430
+    targetPort: "9430"
     protocol: TCP
 resources:
   limits:
