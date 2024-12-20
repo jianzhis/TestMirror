@@ -1,0 +1,28 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: nicolaka/netshoot
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: http
+    port: 22
+    targetPort: http
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env:
+  env1:
+    name: TERM
+    value: xterm-256color
