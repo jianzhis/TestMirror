@@ -21,4 +21,5 @@ persistence:
   accessMode: ReadWriteOnce
   size: 1Gi
   storageClass: local
+  mountPath: /app/data
 env: {}
