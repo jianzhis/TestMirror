@@ -29,7 +29,7 @@ persistence:
 env:
   env1:
     name: CMD_DOMAIN
-    value: docs.example.com
+    value: localhost
   env2:
     name: CMD_URL_ADDPORT
     value: "true"
