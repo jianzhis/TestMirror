@@ -1,0 +1,41 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: mondedie/flarum
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: http
+    port: 80
+    targetPort: "8000"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env:
+  "# 论坛显示的标题名称": null
+  env1:
+    name: FLARUM_FORUM_TITLE
+    value: 我的社区
+  "# 管理员账号用户名": null
+  env2:
+    name: FLARUM_ADMIN_USER
+    value: admin
+  "# 管理员账号密码": null
+  env3:
+    name: FLARUM_ADMIN_PASSWORD
+    value: password
+  "# 论坛的基础URL地址": null
+  env4:
+    name: FLARUM_BASE_URL
+    value: http://localhost
