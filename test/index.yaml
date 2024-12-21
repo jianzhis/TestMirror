@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 协作工具
     apiVersion: v2
     appVersion: 1.9.7
-    created: "2024-12-21T07:59:19.886753509Z"
+    created: "2024-12-21T08:02:42.935607139Z"
     description: 实时协作的 Markdown 编辑器，支持多人同时编辑
-    digest: cfcbb853c165a055e8d3c4cfe38538a5a83092bd11a0d721b27370d1dbec1e4f
+    digest: cba2544d0bb40d3defe7483aeb09cb9e2bce90b1ff895ae6e554fae4520b3044
     home: https://hedgedoc.org
     icon: https://assets.yunna.net/i/2024/12/20/xm1qcj.png
     keywords:
@@ -30,9 +30,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-21T07:59:19.887147168Z"
+    created: "2024-12-21T08:02:42.936368757Z"
     description: 'MCSManager 是一个开源的 Minecraft 服务器管理面板，支持多服务器管理、在线控制台、文件管理、账号权限等功能。 '
-    digest: e8c6aa04a45f9b003f0e5445c25ca462d65a0b9b6e7bc2a9376d037df905c462
+    digest: 767dfc7f826daaa6e82306a6ea607d5de850520282325609df3c6968952236f9
     home: https://mcsmanager.com/
     icon: https://assets.yunna.net/i/2024/12/13/sp7ioh.png
     keywords:
@@ -51,10 +51,10 @@ entries:
       yunna.net/category-zh: 游戏服务器
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-21T07:59:19.887518585Z"
+    created: "2024-12-21T08:02:42.937074409Z"
     description: 'Minecraft 是一款广受欢迎的沙盒游戏，玩家可以在其中探索、建造、合作与战斗。  本 部署 Minecraft 服务器，为玩家提供多人在线游戏世界，并支持自定义插件、模组和配置，满足社区服务器和私人服务器需求。
       该服务器支持官方版和 Forge、Paper 等模组版，为玩家提供丰富的游戏体验。 '
-    digest: ab577e41c82b512448c22dfb5c58e97aad78074eba058a184a31074350c7e44c
+    digest: dfffba1d510e969d9a0c865388ae9e33d4f831660aaef6fc99d1e18badab4d16
     home: https://www.minecraft.net/
     icon: https://assets.yunna.net/i/2024/12/13/sqhneo.png
     keywords:
@@ -79,7 +79,7 @@ entries:
       yunna.net/category-zh: 网络工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-21T07:59:19.887827956Z"
+    created: "2024-12-21T08:02:42.937678462Z"
     description: 功能强大的网络诊断和调试工具箱，包含各种网络工具
     digest: 2b46f531f6f2573c0e9fe390453f726876596ccb055bf648f73ac947f4b7ebeb
     home: https://github.com/nicolaka/netshoot
@@ -104,9 +104,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: 3.1.0
-    created: "2024-12-21T07:59:19.888156853Z"
+    created: "2024-12-21T08:02:42.938352946Z"
     description: Node-RED 是一个基于流程的开发工具,用于以可视化方式连接硬件设备、API和在线服务
-    digest: 08ed9d19ebd95ed26a6108be9188977c990112e2d44c8ca99af1e20ff6fee1ec
+    digest: dfe392e44dc2371517633c017e6f41fd8d2b6c0aac5a9ad3cd0e42eef80011e6
     home: https://nodered.org
     icon: https://assets.yunna.net/i/2024/12/15/ci9paz.png
     keywords:
@@ -129,9 +129,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-21T07:59:19.888447398Z"
+    created: "2024-12-21T08:02:42.938918186Z"
     description: PhotoPrism® 是一款适用于去中心化网络的 AI 照片应用。它利用最新技术自动标记和查找图片，不会妨碍您。您可以在家中、私人服务器或云端运行它。
-    digest: 4b192d23e47ffc7dd3fd759f51870240c5145a25509f02a1f10b07b16ca022e6
+    digest: 28fc36cb8f44c4777e72a2713a525de1ddb75e366714a9ea6f8bffa040c98652
     home: https://photoprism.app/
     icon: https://assets.yunna.net/i/2024/12/20/su26fz.png
     keywords:
@@ -149,9 +149,9 @@ entries:
       yunna.net/category-zh: 消息队列
     apiVersion: v2
     appVersion: 3.12.0
-    created: "2024-12-21T07:59:19.888734067Z"
+    created: "2024-12-21T08:02:42.939469369Z"
     description: 'RabbitMQ 是一个功能强大的消息队列系统，用于跨分布式系统可靠传递消息。 '
-    digest: eda338b0828806ea9350edc371acef839f947fdd90f5d0f9eb39caeb2510dca8
+    digest: be373ee683750deff8fc973757aaa2243cb313793016095e89bf5e56667ca0ee
     home: https://www.rabbitmq.com
     icon: https://assets.yunna.net/i/2024/12/15/10iusta.png
     keywords:
@@ -172,9 +172,9 @@ entries:
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: "6.2"
-    created: "2024-12-21T07:59:19.889015555Z"
+    created: "2024-12-21T08:02:42.940000875Z"
     description: '部署高可用 Redis 缓存服务，支持持久化存储和主从模式。 '
-    digest: 9e51a16d52ce774d928e7b0f53f5b742ca9f5cd73ab25a4aa29a62c80298af35
+    digest: 50f4340cda3912372e7176d751bfcd9cdef54ef66639735ac61cb1859a2b3d71
     home: https://redis.io/
     icon: https://assets.yunna.net/i/2024/12/11/ppvd2n.png
     keywords:
@@ -196,9 +196,9 @@ entries:
       yunna.net/category-zh: 协作工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-21T07:59:19.889377414Z"
+    created: "2024-12-21T08:02:42.940710616Z"
     description: Syncthing 是一个开源的文件同步工具，提供安全的点对点文件同步功能。它能够在多个设备之间保持指定文件夹的内容同步，所有通信都经过加密，确保数据传输的安全性。支持版本控制、冲突检测和自动同步，是团队文件共享和个人数据同步的理想选择。
-    digest: 488461d2e29e398939f3a6ecea02fd844d6e0b861622fb093a2929664cf69c8d
+    digest: 393aa0e93b4acf168933db5055473f24ecce22171db021fb7f0e848ee0006155
     home: https://syncthing.net/
     icon: https://assets.yunna.net/i/2024/12/21/ppz1i2.png
     keywords:
@@ -220,7 +220,7 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: '{{ .Values.image.tag }}'
-    created: "2024-12-21T07:59:19.889910755Z"
+    created: "2024-12-21T08:02:42.941734906Z"
     description: '基于 Ubuntu 的 Helm Chart，内置 SSH 服务和常用工具。 '
     digest: 5b5cca3e81c018a2ee3463493bb81a90342bb5369e817c5274fe8416a6edbf9b
     home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
@@ -243,9 +243,9 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-21T07:59:19.88965764Z"
+    created: "2024-12-21T08:02:42.941228928Z"
     description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
-    digest: ee2ff078e8ee73b5f09ef985b1a3200f642cb749dcaafd36429939da98972537
+    digest: 28bf1361c0f43d56a44c2b6e29297f124ef9a5307d8f5eae8e30fac15fb4be6d
     home: https://github.com/example/ubuntu-ssh
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -266,10 +266,10 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-21T07:59:19.890221509Z"
+    created: "2024-12-21T08:02:42.942370708Z"
     description: 'Uptime Kuma 是一个开源、轻量的自托管监控工具，支持对网站、服务器和 API 的正常运行时间进行实时监控，帮助用户快速了解服务的运行状况。它提供友好的用户界面、支持多种通知方式（如邮件、Telegram、Slack
       等）以及历史记录追踪功能。 '
-    digest: 44b660608692118080131caf87488e32257a53f10db8bd499fadf28865d4c1c8
+    digest: fd05492ed5469a2f62c85fff9056f74365104de2d401b5a21383458b976f3411
     home: https://github.com/louislam/uptime-kuma
     icon: https://assets.yunna.net/i/2024/12/13/sr129s.png
     keywords:
@@ -286,4 +286,4 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/uptime-kuma-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-21T07:59:19.8862535Z"
+generated: "2024-12-21T08:02:42.93475419Z"
