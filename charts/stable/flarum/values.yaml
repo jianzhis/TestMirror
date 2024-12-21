@@ -23,19 +23,16 @@ persistence:
   storageClass: local
   mountPath: /app/data
 env:
-  "# 论坛显示的标题名称": null
-  env1:
+  # 论坛配置
+  forum_title:
     name: FLARUM_FORUM_TITLE
-    value: 我的社区
-  "# 管理员账号用户名": null
-  env2:
+    value: "我的社区"
+  admin_user:
     name: FLARUM_ADMIN_USER
-    value: admin
-  "# 管理员账号密码": null
-  env3:
+    value: "admin"
+  admin_password:
     name: FLARUM_ADMIN_PASSWORD
-    value: password
-  "# 论坛的基础URL地址": null
-  env4:
+    value: "password"
+  base_url:
     name: FLARUM_BASE_URL
-    value: http://localhost
+    value: "http://localhost"
