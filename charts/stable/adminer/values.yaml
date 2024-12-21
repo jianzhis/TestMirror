@@ -1,0 +1,33 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: dockette/adminer
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: web
+    port: 8080
+    targetPort: "8080"
+    protocol: TCP
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env:
+  env1:
+    name: ADMINER_DESIGN
+    value: pepa-linha
+  env2:
+    name: ADMINER_DB
+    value: mysql
+  env3:
+    name: ADMINER_SERVER
+    value: mysql
+  env4:
+    name: ADMINER_USERNAME
+    value: root
+  env5:
+    name: ADMINER_PASSWORD
+    value: "123456"

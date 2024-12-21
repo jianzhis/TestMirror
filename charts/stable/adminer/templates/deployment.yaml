@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mysql-adminer.fullname" . }}
+  name: {{ include "adminer.fullname" . }}
   labels:
-    {{- include "mysql-adminer.labels" . | nindent 4 }}
+    {{- include "adminer.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "mysql-adminer.selectorLabels" . | nindent 6 }}
+      {{- include "adminer.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "mysql-adminer.labels" . | nindent 8 }}
-        {{- include "mysql-adminer.selectorLabels" . | nindent 8 }}
+        {{- include "adminer.labels" . | nindent 8 }}
+        {{- include "adminer.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ include "mysql-adminer.name" . }}
+        - name: {{ include "adminer.name" . }}
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
@@ -48,5 +48,5 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: {{ include "mysql-adminer.fullname" . }}-pvc
+            claimName: {{ include "adminer.fullname" . }}-pvc
       {{- end }}

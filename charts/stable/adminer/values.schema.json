@@ -95,12 +95,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "ADMINER_DEFAULT_SERVER"
+              "default": "ADMINER_DESIGN"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "localhost"
+              "default": "pepa-linha"
             }
           },
           "required": [
@@ -116,12 +116,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_ROOT_PASSWORD"
+              "default": "ADMINER_DB"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "admin123"
+              "default": "mysql"
             }
           },
           "required": [
@@ -137,12 +137,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_DATABASE"
+              "default": "ADMINER_SERVER"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "mydb"
+              "default": "mysql"
             }
           },
           "required": [
@@ -158,12 +158,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_USER"
+              "default": "ADMINER_USERNAME"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "admin"
+              "default": "root"
             }
           },
           "required": [
@@ -179,12 +179,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_PASSWORD"
+              "default": "ADMINER_PASSWORD"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "password123"
+              "default": "123456"
             }
           },
           "required": [
