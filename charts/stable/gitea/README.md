@@ -18,18 +18,16 @@
 | `image.pullPolicy` | 应用拉取策略 | string | IfNotPresent |
 | `resources.limits.cpu` | CPU 限制 | string | 1000m |
 | `resources.limits.memory` | 内存限制 | string | 1024Mi |
-| `env.USER_UID.value` | Gitea运行用户的UID | string | "1000" |
-| `env.USER_GID.value` | Gitea运行用户的GID | string | "1000" |
-| `env.GITEA_SERVER_URL.value` | Gitea外部访问地址 | string | ""http://localhost:3000"" |
-| `env.GITEA_DB_TYPE.value` | 数据库主机地址 | string | ""mysql"" |
-| `env.GITEA_DB_USER.value` | 数据库用户名 | string | ""gitea"" |
-| `env.GITEA_DB_PASSWORD.value` | 数据库密码 | string | ""gitea_password"" |
+| `env.USER_UID.value` | Gitea运行用户的UID，示例：1000 | string | "1000" |
+| `env.USER_GID.value` | Gitea运行用户的GID，示例：1000 | string | "1000" |
+| `env.GITEA_SERVER_URL.value` | Gitea外部访问地址，示例：http://localhost:3000 | string | "http://localhost:3000" |
+| `env.GITEA_DB_TYPE.value` | 数据库类型，示例：mysql | string | "mysql" |
+| `env.GITEA_DB_USER.value` | 数据库用户名，示例：gitea | string | "gitea" |
+| `env.GITEA_DB_PASSWORD.value` | 数据库密码，示例：gitea_password | string | "gitea_password" |
 
 ## 部署步骤
 1. 输入配置参数
-
 2. 选择拥有足够配置应用空间
-
 3. 立即部署
 
 ## 使用说明

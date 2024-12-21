@@ -10,7 +10,7 @@ maintainers:
   - name: niehaoran
     email: niehaoran@yunna.net
 annotations:
-  yunna.net/category: Development
+  yunna.net/category: developer-tools
   yunna.net/category-zh: 开发工具
 keywords:
   - git
