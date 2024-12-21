@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: library/adminer
+  repository: dockette/adminer
   tag: latest
   pullPolicy: IfNotPresent
 services:
