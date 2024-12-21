@@ -95,12 +95,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "ADMINER_DEFAULT_SERVER"
+              "default": "MODE"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "localhost"
+              "default": "standalone"
             }
           },
           "required": [
@@ -116,12 +116,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_ROOT_PASSWORD"
+              "default": "SPRING_DATASOURCE_PLATFORM"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "admin123"
+              "default": "mysql"
             }
           },
           "required": [
@@ -137,54 +137,12 @@
               "type": "string",
               "title": "变量名称",
               "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_DATABASE"
+              "default": "MYSQL_SERVICE_HOST"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "mydb"
-            }
-          },
-          "required": [
-            "name",
-            "value"
-          ]
-        },
-        "env4": {
-          "type": "object",
-          "title": "环境变量4",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_USER"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "admin"
-            }
-          },
-          "required": [
-            "name",
-            "value"
-          ]
-        },
-        "env5": {
-          "type": "object",
-          "title": "环境变量5",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "pattern": "^[A-Z][A-Z0-9_]*$",
-              "default": "MYSQL_PASSWORD"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "password123"
+              "default": "mysql"
             }
           },
           "required": [

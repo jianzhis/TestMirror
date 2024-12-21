@@ -1,12 +1,6 @@
 apiVersion: v2
 name: mysql-adminer
-description: |-
-  MySQL数据库及其Web管理界面(Adminer)二合一部署方案 - 带可视化web界面
-  默认部署后：
-  数据库端口：3306
-  Web管理界面：访问 8080 端口
-  数据库连接：localhost:3306
-  登录账号：root/admin123 或 admin/password123
+description: MySQL数据库及其Web管理界面(Adminer)二合一部署方案 - 带可视化web界面
 version: 0.1.0
 appVersion: latest
 home: https://hub.docker.com/_/adminer/
@@ -16,7 +10,7 @@ maintainers:
   - name: niehaoran
     email: niehaoran@yunna.net
 annotations:
-  yunna.net/category: Database
+  yunna.net/category: database
   yunna.net/category-zh: 数据库
 keywords:
   - mysql

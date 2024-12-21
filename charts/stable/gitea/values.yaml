@@ -7,11 +7,11 @@ image:
 services:
   - name: http
     port: 3000
-    targetPort: '3000'
+    targetPort: "3000"
     protocol: TCP
   - name: ssh
     port: 22
-    targetPort: '22'
+    targetPort: "22"
     protocol: TCP
 resources:
   limits:
@@ -27,27 +27,27 @@ persistence:
   storageClass: local
   mountPath: /app/data
 env:
-  '# Gitea运行用户的UID': null
+  "# Gitea运行用户的UID": null
   env1:
     name: USER_UID
-    value: '1000'
-  '# Gitea运行用户的GID': null
+    value: "1000"
+  "# Gitea运行用户的GID": null
   env2:
     name: USER_GID
-    value: '1000'
-  '# Gitea外部访问地址': null
+    value: "1000"
+  "# Gitea外部访问地址": null
   env3:
     name: GITEA_SERVER_URL
-    value: '"http://localhost:3000"'
-  '# 数据库主机地址': null
+    value: "http://localhost:3000"
+  "# 数据库主机地址": null
   env4:
     name: GITEA_DB_TYPE
-    value: '"mysql"'
-  '# 数据库用户名': null
+    value: "mysql"
+  "# 数据库用户名": null
   env5:
     name: GITEA_DB_USER
-    value: '"gitea"'
-  '# 数据库密码': null
+    value: "gitea"
+  "# 数据库密码": null
   env6:
     name: GITEA_DB_PASSWORD
-    value: '"gitea_password"'
+    value: "gitea_password"

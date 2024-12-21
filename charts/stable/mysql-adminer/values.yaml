@@ -7,11 +7,11 @@ image:
 services:
   - name: web
     port: 8080
-    targetPort: '8080'
+    targetPort: "8080"
     protocol: TCP
   - name: mysql
     port: 3306
-    targetPort: '3306'
+    targetPort: "3306"
     protocol: TCP
 resources:
   limits:
@@ -27,23 +27,18 @@ persistence:
   storageClass: local
   mountPath: /app/data
 env:
-  '# 默认连接的数据库服务器': null
   env1:
     name: ADMINER_DEFAULT_SERVER
-    value: '"localhost"'
-  '# MySQL root用户密码': null
+    value: localhost
   env2:
     name: MYSQL_ROOT_PASSWORD
-    value: '"admin123"'
-  '# 默认创建的数据库名': null
+    value: admin123
   env3:
     name: MYSQL_DATABASE
-    value: '"mydb"'
-  '# 创建的普通用户名': null
+    value: mydb
   env4:
     name: MYSQL_USER
-    value: '"admin"'
-  '# 普通用户密码': null
+    value: admin
   env5:
     name: MYSQL_PASSWORD
-    value: '"password123"'
+    value: password123
