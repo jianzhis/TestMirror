@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "flarum.fullname" . }}-pvc
+  name: {{ include "mysql-adminer.fullname" . }}-pvc
   labels:
-    {{- include "flarum.labels" . | nindent 4 }}
+    {{- include "mysql-adminer.labels" . | nindent 4 }}
 spec:
   accessModes:
     - {{ .Values.persistence.accessMode }}
