@@ -1,0 +1,18 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: corentinthomas/it-tools
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: http
+    port: 8080
+    targetPort: "8080"
+    protocol: TCP
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env: {}

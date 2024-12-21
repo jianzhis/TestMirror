@@ -1,0 +1,21 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: frooodle/stirling-pdf
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: http
+    port: 8080
+    targetPort: "8080"
+    protocol: TCP
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env:
+  env1:
+    name: DOCKER_ENABLE_SECURITY
+    value: "false"

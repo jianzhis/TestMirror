@@ -1,0 +1,17 @@
+apiVersion: v2
+name: it-tools
+description: 开发者工具集合
+version: latest
+appVersion: latest
+home: https://github.com/CorentinTh/it-tools
+sources:
+  - https://github.com/CorentinTh/it-tools
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: developer-tools
+  yunna.net/category-zh: 开发工具
+keywords:
+  - tools
+icon: https://assets.yunna.net/i/2024/12/15/ci9paz.png

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "filecodebox.fullname" . }}
+  labels:
+    {{- include "filecodebox.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    {{- range .Values.services }}
+    - name: {{ .name }}
+      port: {{ .port }}
+      targetPort: {{ .targetPort }}
+      protocol: {{ .protocol }}
+    {{- end }}
+  selector:
+    {{- include "filecodebox.selectorLabels" . | nindent 4 }}
