@@ -2,8 +2,8 @@ replicaCount: 1
 
 image:
   imageRegistry: "registry-2.yunna.net"
-  repository: rabbitmq
-  tag: "3.12.0-management"
+  repository: bitnami/rabbitmq
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
