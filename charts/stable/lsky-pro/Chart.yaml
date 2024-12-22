@@ -2,7 +2,7 @@ apiVersion: v2
 name: lsky-pro
 description: Lsky Pro 是一个开源的图床程序，支持第三方云储存，支持多用户系统，支持鉴黄，支持多图上传，支持评论系统等功能
 version: 2.1.0
-appVersion: "2.1"
+appVersion: "latest"
 home: https://github.com/lsky-org/lsky-pro
 sources:
   - https://github.com/lsky-org/lsky-pro
