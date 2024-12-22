@@ -1,0 +1,20 @@
+apiVersion: v2
+name: influxdb
+description: InfluxDB 是一个用于存储和分析时间序列数据的开源数据库，特别适合物联网设备数据、监控指标等场景。
+version: 1.0.0
+appVersion: 2.7.3
+home: https://www.influxdata.com/
+sources:
+  - https://github.com/influxdata/influxdb
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: database
+  yunna.net/category-zh: 数据库
+keywords:
+  - timeseries
+  - database
+  - iot
+  - metrics
+icon: https://assets.yunna.net/i/2024/12/22/vnt8m6.png

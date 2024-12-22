@@ -1,0 +1,37 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: telegraf
+  tag: 1.29.1
+  pullPolicy: IfNotPresent
+services:
+  - name: statsd
+    port: 8125
+    targetPort: "8125"
+    protocol: UDP
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env:
+  env1:
+    name: INFLUX_TOKEN
+    value: your-influx-token
+  env2:
+    name: INFLUX_ORG
+    value: yunna
+  env3:
+    name: INFLUX_BUCKET
+    value: iot
+  env4:
+    name: INFLUX_URL
+    value: http://influxdb:8086

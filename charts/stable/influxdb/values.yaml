@@ -1,0 +1,40 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: influxdb/influxdb
+  tag: 2.7.3
+  pullPolicy: IfNotPresent
+services:
+  - name: http
+    port: 8086
+    targetPort: "8086"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 2048Mi
+  requests:
+    cpu: 500m
+    memory: 1024Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+  mountPath: /app/data
+env:
+  env1:
+    name: DOCKER_INFLUXDB_INIT_MODE
+    value: setup
+  env2:
+    name: DOCKER_INFLUXDB_INIT_USERNAME
+    value: admin
+  env3:
+    name: DOCKER_INFLUXDB_INIT_PASSWORD
+    value: password123
+  env4:
+    name: DOCKER_INFLUXDB_INIT_ORG
+    value: yunna
+  env5:
+    name: DOCKER_INFLUXDB_INIT_BUCKET
+    value: iot
