@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: liesauer/filecodebox
+  repository: lanol/filecodebox
   tag: latest
   pullPolicy: IfNotPresent
 services:
