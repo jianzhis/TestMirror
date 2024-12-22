@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: usememos/memos
+  repository: ghcr.io/usememos/memos
   tag: latest
   pullPolicy: IfNotPresent
 services:
