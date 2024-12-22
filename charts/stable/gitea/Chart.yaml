@@ -2,7 +2,7 @@ apiVersion: v2
 name: gitea
 description: 轻量级自托管Git服务
 version: 0.1.0
-appVersion: latest
+appVersion: "latest"
 home: https://gitea.io/
 sources:
   - https://github.com/go-gitea/gitea

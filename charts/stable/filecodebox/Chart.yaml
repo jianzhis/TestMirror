@@ -2,7 +2,7 @@ apiVersion: v2
 name: filecodebox
 description: 文件分享工具
 version: latest
-appVersion: latest
+appVersion: "latest"
 home: https://github.com/file-code-box/filecodebox
 sources:
   - https://github.com/file-code-box/filecodebox

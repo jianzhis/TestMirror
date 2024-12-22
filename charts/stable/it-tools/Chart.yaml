@@ -2,7 +2,7 @@ apiVersion: v2
 name: it-tools
 description: 开发者工具集合
 version: latest
-appVersion: latest
+appVersion: "latest"
 home: https://github.com/CorentinTh/it-tools
 sources:
   - https://github.com/CorentinTh/it-tools

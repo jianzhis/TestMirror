@@ -2,13 +2,13 @@ apiVersion: v2
 name: adminer
 description: 轻量级的数据库管理工具
 version: 1.0.0
-appVersion: latest
+appVersion: "latest"
 home: https://www.adminer.org/
 sources:
   - https://github.com/dockette/adminer
 maintainers:
-  - name: Admin
-    email: admin@yunna.net
+  - name: niehaoran
+    email: niehaoran@yunna.net
 annotations:
   yunna.net/category: database
   yunna.net/category-zh: 数据库

@@ -2,7 +2,7 @@ apiVersion: v2
 name: stirling-pdf
 description: 本地PDF处理工具
 version: latest
-appVersion: latest
+appVersion: "latest"
 home: https://github.com/Frooodle/Stirling-PDF
 sources:
   - https://github.com/Frooodle/Stirling-PDF

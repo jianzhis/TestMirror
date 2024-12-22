@@ -2,7 +2,7 @@ apiVersion: v2
 name: photoprism
 description: PhotoPrism® 是一款适用于去中心化网络的 AI 照片应用。它利用最新技术自动标记和查找图片，不会妨碍您。您可以在家中、私人服务器或云端运行它。
 version: 0.1.0
-appVersion: latest
+appVersion: "latest"
 home: https://photoprism.app/
 sources: []
 maintainers:
