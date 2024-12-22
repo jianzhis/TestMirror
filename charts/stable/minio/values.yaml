@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
   repository: minio/minio
-  tag: RELEASE.2024-02-26T09-33-28Z
+  tag: latest
   pullPolicy: IfNotPresent
 services:
   - name: api
