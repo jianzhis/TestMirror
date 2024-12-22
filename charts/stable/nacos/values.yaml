@@ -9,6 +9,13 @@ services:
     port: 8848
     targetPort: "8848"
     protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
 persistence:
   enabled: true
   accessMode: ReadWriteOnce

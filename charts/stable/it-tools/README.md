@@ -1,7 +1,7 @@
 # it-tools
 
 ## 介绍
-开发者工具集合
+A comprehensive collection of IT tools and utilities
 
 ## 主要功能
 - Kubernetes 应用部署
@@ -16,8 +16,8 @@
 | `image.repository` | 应用名称 | string | corentinthomas/it-tools |
 | `image.tag` | 应用标签 | string | latest |
 | `image.pullPolicy` | 应用拉取策略 | string | IfNotPresent |
-| `resources.limits.cpu` | CPU 限制 | string | undefined |
-| `resources.limits.memory` | 内存限制 | string | undefined |
+| `resources.limits.cpu` | CPU 限制 | string | 1000m |
+| `resources.limits.memory` | 内存限制 | string | 1024Mi |
 
 
 ## 部署步骤
@@ -26,7 +26,7 @@
 3. 立即部署
 
 ## 使用说明
-开发者工具集合
+A comprehensive collection of IT tools and utilities
 
 ## 故障排除
 1. Pod 无法启动
