@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: corentinthomas/it-tools
+  repository: qingfeng2336/it-tools
   tag: latest
   pullPolicy: IfNotPresent
 services:

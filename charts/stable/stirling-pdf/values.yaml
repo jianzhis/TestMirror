@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: benjjvi/stirling-pdf
+  repository: stirlingtools/stirling-pdf
   tag: latest
   pullPolicy: IfNotPresent
 services:
