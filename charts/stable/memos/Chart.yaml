@@ -1,7 +1,7 @@
 apiVersion: v2
 name: memos
 description: 开源的轻量级笔记服务
-version: latest
+version: 0.1.0
 appVersion: "latest"
 home: https://github.com/usememos/memos
 sources:
