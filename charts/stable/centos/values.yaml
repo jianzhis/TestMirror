@@ -2,12 +2,12 @@ replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
   repository: centos
-  tag: "7"
+  tag: "latest"
   pullPolicy: IfNotPresent
 services:
   - name: ssh
     port: 22
-    targetPort: 22
+    targetPort: "22"
     protocol: TCP
 resources:
   limits:
