@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
   repository: centos
-  tag: "latest"
+  tag: "7"
   pullPolicy: IfNotPresent
 services:
   - name: ssh
