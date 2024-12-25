@@ -82,28 +82,6 @@
           "default": "local"
         }
       }
-    },
-    "env": {
-      "type": "object",
-      "title": "环境变量",
-      "properties": {
-        "env1": {
-          "type": "object",
-          "title": "环境变量1",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "RELAY"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "1"
-            }
-          }
-        }
-      }
     }
   },
   "required": [

@@ -25,7 +25,4 @@ persistence:
   accessMode: ReadWriteOnce
   size: 1Gi
   storageClass: local
-env:
-  env1:
-    name: RELAY
-    value: "1"
+env: []
