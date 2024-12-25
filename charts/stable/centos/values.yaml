@@ -1,0 +1,33 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: centos
+  tag: "7"
+  pullPolicy: IfNotPresent
+services:
+  - name: ssh
+    port: 22
+    targetPort: "22"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: ROOT_PASSWORD
+    value: yunna@2024
+  env2:
+    name: SSH_PORT
+    value: "22"
+  env3:
+    name: TZ
+    value: Asia/Shanghai
