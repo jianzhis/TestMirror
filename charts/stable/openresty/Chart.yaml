@@ -1,0 +1,19 @@
+apiVersion: v2
+name: openresty
+description: OpenResty® 是一个基于 Nginx 和 LuaJIT 的全功能 Web 应用服务器
+version: 1.0.0
+appVersion: 1.21.4.1-alpine
+home: https://openresty.org
+sources:
+  - https://github.com/openresty/docker-openresty
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: webserver
+  yunna.net/category-zh: Web服务器
+keywords:
+  - Nginx
+  - Lua
+  - Web
+icon: https://assets.yunna.net/i/2024/12/26/1t0v1.png

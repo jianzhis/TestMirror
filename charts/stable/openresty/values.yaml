@@ -1,0 +1,27 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: openresty/openresty
+  tag: 1.21.4.1-alpine
+  pullPolicy: IfNotPresent
+services:
+  - name: http
+    port: 80
+    targetPort: "80"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: NGINX_ENTRYPOINT_QUIET_LOGS
+    value: "1"
