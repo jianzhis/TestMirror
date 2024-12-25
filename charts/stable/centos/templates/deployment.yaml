@@ -25,6 +25,7 @@ spec:
               containerPort: {{ .port }}
               protocol: {{ .protocol }}
             {{- end }}
+          command: ["/usr/sbin/sshd", "-D"]
           env:
             {{- if kindIs "array" .Values.env }}
             {{- range .Values.env }}
@@ -43,6 +44,7 @@ spec:
           volumeMounts:
             - name: {{ include "centos.name" . }}-data
               mountPath: /app/data
+              
           {{- end }}
       {{- if .Values.persistence.enabled }}
       volumes:
