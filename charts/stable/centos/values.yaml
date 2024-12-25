@@ -7,7 +7,7 @@ image:
 services:
   - name: ssh
     port: 22
-    targetPort: 22
+    targetPort: "22"
     protocol: TCP
 resources:
   limits:
@@ -24,10 +24,10 @@ persistence:
 env:
   env1:
     name: ROOT_PASSWORD
-    value: "yunna@2024"
+    value: yunna@2024
   env2:
     name: SSH_PORT
     value: "22"
   env3:
     name: TZ
-    value: "Asia/Shanghai"
+    value: Asia/Shanghai

@@ -16,16 +16,16 @@ centos
 Generate common labels 
 */}}
 {{- define "centos.labels" -}}
-app.kubernetes.io/name: {{ include "centos.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
-app.kubernetes.io/version: {{ .Chart.AppVersion }}
-helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+app.kubernetes.io/name: {{ include "centos.name" . | quote }}
+app.kubernetes.io/instance: {{ .Release.Name | quote }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version | quote }}
 {{- end -}}
 
 {{/*
 Selector labels
 */}}
 {{- define "centos.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "centos.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/name: {{ include "centos.name" . | quote }}
+app.kubernetes.io/instance: {{ .Release.Name | quote }}
 {{- end -}}
