@@ -28,4 +28,4 @@ persistence:
 env:
   env1:
     name: RELAY
-    value: 1
+    value: "1"
