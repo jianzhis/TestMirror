@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.447158432Z"
+    created: "2024-12-25T17:39:53.57351191Z"
     description: 轻量级的数据库管理工具
-    digest: 20ba7e22ee817612390b2ce648a03a00556d4258c8e8acaae02422cac91dbc3a
+    digest: 003b72093c7f97b7780a975834fc5bfbb9e27ae8aa99e96d4cb298877bd5960f
     home: https://www.adminer.org/
     icon: https://assets.yunna.net/i/2024/12/21/114apom.png
     keywords:
@@ -31,10 +31,10 @@ entries:
       yunna.net/category-zh: 存储
     apiVersion: v2
     appVersion: v3.30.0
-    created: "2024-12-25T17:33:28.447618082Z"
+    created: "2024-12-25T17:39:53.573973322Z"
     description: AList 是一个支持多种存储的文件列表程序，支持 WebDAV、网盘挂载、在线播放、离线下载、文件预览等功能。支持 OneDrive、Google
       Drive、阿里云盘、百度网盘等多种存储方式
-    digest: ec8cef3ff6bb8abd4f05899b5863d60cff71865a1de2f0515f16ee217aa96aa6
+    digest: 0e0b27578ea0ae95fba6d55c2b4143347b4c7358229f5f42c8fc161c75fd497c
     home: https://github.com/alist-org/alist
     icon: https://assets.yunna.net/i/2024/12/22/10luvyd.png
     keywords:
@@ -58,10 +58,10 @@ entries:
       yunna.net/category: base
       yunna.net/category-zh: 基础镜像
     apiVersion: v2
-    appVersion: "7"
-    created: "2024-12-25T17:33:28.447955252Z"
+    appVersion: latest
+    created: "2024-12-25T17:39:53.5742773Z"
     description: 基于CentOS 7的容器镜像，预装SSH服务和常用工具，适用于开发和测试环境
-    digest: 392e9ec52c157798e9412dc1c29ea00a4ea1789d3a8d4fe72fc6c5e2af97c0de
+    digest: 25436badc8cffbfa4fe14e82cc87d58a8654e40437cab6f995e51e588ca0ec5b
     home: https://github.com/yunna/centos
     icon: https://assets.yunna.net/i/2024/12/25/12mf7yh.pn
     keywords:
@@ -83,9 +83,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.448287334Z"
+    created: "2024-12-25T17:39:53.574612887Z"
     description: 基于浏览器的 VS Code - 云端开发集成环境，支持在线编程和远程开发，提供完整的 VS Code 功能体验
-    digest: b37d11f195c8993a8557d3407f0a6f8a81f015b54962f4ffae788609d932e318
+    digest: ed0e9e87b58d2c36d654b50bbe6f5eb675bd5c41abf8fef5bc268e58622e41e5
     home: https://github.com/coder/code-server
     icon: https://assets.yunna.net/i/2024/12/15/d8jmxk.png
     keywords:
@@ -109,9 +109,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.448610769Z"
+    created: "2024-12-25T17:39:53.574933205Z"
     description: Draw.io 是一个强大的在线图表编辑工具，支持流程图、UML图、网络拓扑图等多种图表类型的绘制
-    digest: 30c7ba9d897a451e9e6af3507f66954ce30a634846ea5474f7c603a92ab201d1
+    digest: a170b2a23fe51a9ef3ece4dfca24ee19a8ba1f57e774a52e47466a8e4ad36505
     home: https://www.drawio.com
     icon: https://assets.yunna.net/i/2024/12/22/xqa0qg.png
     keywords:
@@ -134,9 +134,9 @@ entries:
       yunna.net/category-zh: 实用工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.448901472Z"
+    created: "2024-12-25T17:39:53.575232644Z"
     description: 文件分享工具
-    digest: 5c04f860b1e560e23a091cc6b809cac40bb0e065be375e54d6083d146c0dc8d1
+    digest: c11048494fa4097e4154f0a0c22ba048dcbc60f88b4832d5de048fd229f2a9f0
     home: https://github.com/file-code-box/filecodebox
     icon: https://assets.yunna.net/i/2024/12/22/3vnbpm.png
     keywords:
@@ -156,7 +156,7 @@ entries:
       yunna.net/category-zh: 论坛
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.449222002Z"
+    created: "2024-12-25T17:39:53.575560186Z"
     description: 现代化的轻量级开源论坛系统
     digest: a75ad72d2aadfaabd3393b5b755e0b47cbaad6b01880ab33bb2ad1c9fcc3a1e1
     home: https://flarum.org/
@@ -180,9 +180,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.449545587Z"
+    created: "2024-12-25T17:39:53.57588888Z"
     description: 轻量级自托管Git服务
-    digest: 5ebbb46e6a78e4d2cd743349af72e9ae0b72555938a9565765781cd20eda4744
+    digest: 56df8cc5344f191b02d4c11ac26032a29a3789b1eda2d9a3bd4e2642f58cea80
     home: https://gitea.io/
     icon: https://assets.yunna.net/i/2024/12/22/3w4efu.png
     keywords:
@@ -204,9 +204,9 @@ entries:
       yunna.net/category-zh: 分析工具
     apiVersion: v2
     appVersion: 10.2.3
-    created: "2024-12-25T17:33:28.449850357Z"
+    created: "2024-12-25T17:39:53.576213246Z"
     description: Grafana 是一个开源的可视化和分析平台。支持多种数据源，可以创建丰富的仪表板，是物联网数据可视化的理想选择。
-    digest: 8589045c5a4f91cadf1d2ecd47b7e6aad5eff2ff301f99c0fec5aedb00a084e6
+    digest: 11ed6eeea5602508c792f8b50349185d4e576ed849fdb1051f9b1cb91cf875a6
     home: https://grafana.com/
     icon: https://assets.yunna.net/i/2024/12/22/vmyag5.png
     keywords:
@@ -229,9 +229,9 @@ entries:
       yunna.net/category-zh: 协作工具
     apiVersion: v2
     appVersion: 1.9.7
-    created: "2024-12-25T17:33:28.450145068Z"
+    created: "2024-12-25T17:39:53.57650969Z"
     description: 实时协作的 Markdown 编辑器，支持多人同时编辑
-    digest: fa9aa1ed2c0834038a5485594ce6b558c704026dcba4de133bac8255d8d0144e
+    digest: f375c3cb1906c4c0cd1bdd524449299a3ed8ce080866dc54ee417771910aa78f
     home: https://hedgedoc.org
     icon: https://assets.yunna.net/i/2024/12/20/xm1qcj.png
     keywords:
@@ -253,9 +253,9 @@ entries:
       yunna.net/category-zh: 物联网
     apiVersion: v2
     appVersion: 2024.1.3
-    created: "2024-12-25T17:33:28.450436083Z"
+    created: "2024-12-25T17:39:53.576819799Z"
     description: Home Assistant 是一个开源的家庭自动化平台，能够追踪和控制智能家居设备，支持多种自动化场景和设备集成。
-    digest: ef03a2681f4898b5a2ba9d7c66be70851a458e88af5d58b61b2b1ed1d578e86c
+    digest: 7b089be6331cefcf0a0cb1c9dec3d6b5bc29f39bcdb9acb84d2f9c6f63d2091b
     home: https://www.home-assistant.io/
     icon: https://assets.yunna.net/i/2024/12/22/x9gb0y.png
     keywords:
@@ -278,7 +278,7 @@ entries:
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: 2.7.3
-    created: "2024-12-25T17:33:28.450757714Z"
+    created: "2024-12-25T17:39:53.577135408Z"
     description: InfluxDB 是一个用于存储和分析时间序列数据的开源数据库，特别适合物联网设备数据、监控指标等场景。
     digest: 73889a505d774037ef8201f740598a217f48867f7ef9c0fbd6a4cea2154a6179
     home: https://www.influxdata.com/
@@ -303,9 +303,9 @@ entries:
       yunna.net/category-zh: 工具集
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.451332559Z"
+    created: "2024-12-25T17:39:53.577835235Z"
     description: A comprehensive collection of IT tools and utilities
-    digest: add03cffcb4a237761f5cec1de2ef7dca573538f0b16752053cdce52665206ab
+    digest: 90f2d3342e7c605279accc78ac0edb3e66b6010aa7a304eb5ed95feffcf6d26e
     home: https://github.com/corentinthomas/it-tools
     icon: https://assets.yunna.net/i/2024/12/22/3wj9iq.png
     keywords:
@@ -325,7 +325,7 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.451038269Z"
+    created: "2024-12-25T17:39:53.577376639Z"
     description: 开发者工具集合
     digest: f164f48702c4432a2fde1df77a54ab8ca83bcb1aff964fbab5201f69e3faec7f
     home: https://github.com/CorentinTh/it-tools
@@ -347,9 +347,9 @@ entries:
       yunna.net/category-zh: 工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.451692963Z"
+    created: "2024-12-25T17:39:53.578721833Z"
     description: Lsky Pro 是一个开源的图床程序，支持第三方云储存，支持多用户系统，支持鉴黄，支持多图上传，支持评论系统等功能
-    digest: 65bca451fe71f330cb90416fd87993e3b13c6b23bf1e85b064e0db3a36aafa60
+    digest: bb7b476ddd0848b2fdab40592c2f75df020e949dd0e7185dcde03342fa0efa57
     home: https://github.com/lsky-org/lsky-pro
     icon: https://assets.yunna.net/i/2024/12/22/znyvsc.png
     keywords:
@@ -373,9 +373,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.452074256Z"
+    created: "2024-12-25T17:39:53.579079982Z"
     description: 'MCSManager 是一个开源的 Minecraft 服务器管理面板，支持多服务器管理、在线控制台、文件管理、账号权限等功能。 '
-    digest: b4e0dc570e45b485fc53dca4afe260b13eab6fd71d6c0e9aadc332dbd1e36736
+    digest: 8333643a7669d24f4656921b9c35cdbf4d7708ae506d2f94effafe6821965333
     home: https://mcsmanager.com/
     icon: https://assets.yunna.net/i/2024/12/13/sp7ioh.png
     keywords:
@@ -394,9 +394,9 @@ entries:
       yunna.net/category-zh: 实用工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.452339993Z"
+    created: "2024-12-25T17:39:53.579356679Z"
     description: 开源的轻量级笔记服务
-    digest: b05efb2bb9219905546b6508818e45682a9cf178815166da2268fef2cca9c826
+    digest: db7f85bd2cbe4c1e0c8915e4d4b3c5daf96d3d42a72f012202390b9e83bab8cb
     home: https://github.com/usememos/memos
     icon: https://assets.yunna.net/i/2024/12/22/3wospc.png
     keywords:
@@ -416,10 +416,10 @@ entries:
       yunna.net/category-zh: 游戏服务器
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-25T17:33:28.453322925Z"
+    created: "2024-12-25T17:39:53.579738252Z"
     description: 'Minecraft 是一款广受欢迎的沙盒游戏，玩家可以在其中探索、建造、合作与战斗。  本 部署 Minecraft 服务器，为玩家提供多人在线游戏世界，并支持自定义插件、模组和配置，满足社区服务器和私人服务器需求。
       该服务器支持官方版和 Forge、Paper 等模组版，为玩家提供丰富的游戏体验。 '
-    digest: abe245a86bb4da40fd5e2ce53512755527c180a9655ce307c924917c8ef17e3b
+    digest: c179cdfff7eb5d3379916e15a5c34e5b836d11222c79960b5b7103811dd79943
     home: https://www.minecraft.net/
     icon: https://assets.yunna.net/i/2024/12/13/sqhneo.png
     keywords:
@@ -444,9 +444,9 @@ entries:
       yunna.net/category-zh: 存储服务
     apiVersion: v2
     appVersion: RELEASE.2024-02-26T09-33-28Z
-    created: "2024-12-25T17:33:28.453713776Z"
+    created: "2024-12-25T17:39:53.580093626Z"
     description: MinIO 是一个高性能的分布式对象存储系统，支持原生 Kubernetes 集成，可用于私有云存储、备份存储等场景
-    digest: 2e8f753c1344340001f4be6dd437f437e09b3cff27ca352ec0f2852ce7164a16
+    digest: aabfc245a593b2e4ff29aaca5a841010b28fbc70116e3784ba3d537017ae3a3b
     home: https://min.io
     icon: https://assets.yunna.net/i/2024/12/22/xecz6y.png
     keywords:
@@ -469,7 +469,7 @@ entries:
       yunna.net/category-zh: 中间件
     apiVersion: v2
     appVersion: 2.0.18
-    created: "2024-12-25T17:33:28.454035127Z"
+    created: "2024-12-25T17:39:53.580407833Z"
     description: Eclipse Mosquitto 是一个开源的消息代理，实现了 MQTT 协议版本 5.0、3.1.1 和 3.1。非常适合物联网场景下的消息传递。
     digest: 0bec34f82a39492a7c905d5994f38abe08f4bdda590aee875ba6d82b57535c83
     home: https://mosquitto.org/
@@ -494,7 +494,7 @@ entries:
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.454358823Z"
+    created: "2024-12-25T17:39:53.580737518Z"
     description: MySQL数据库及其Web管理界面(Adminer)二合一部署方案 - 带可视化web界面
     digest: 95625f3193563a4e6d1d0568d84206d0d7565b1eb0cc690be03d6ccb4d65e55a
     home: https://hub.docker.com/_/adminer/
@@ -518,9 +518,9 @@ entries:
       yunna.net/category-zh: 微服务
     apiVersion: v2
     appVersion: v2.3.0
-    created: "2024-12-25T17:33:28.454649596Z"
+    created: "2024-12-25T17:39:53.58102733Z"
     description: 阿里巴巴开源的服务发现和配置管理平台
-    digest: b6d56a25668ea4be3c99a4fa51539d56f802f88c48228347e4996b7242525544
+    digest: 1e97d56327fd602766b22d19ae497eabe57de4457091ad363cf10d42053d893d
     home: https://nacos.io/
     icon: https://assets.yunna.net/i/2024/12/22/3x5aey.png
     keywords:
@@ -542,7 +542,7 @@ entries:
       yunna.net/category-zh: 网络工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.45494005Z"
+    created: "2024-12-25T17:39:53.581322351Z"
     description: 功能强大的网络诊断和调试工具箱，包含各种网络工具
     digest: 2b46f531f6f2573c0e9fe390453f726876596ccb055bf648f73ac947f4b7ebeb
     home: https://github.com/nicolaka/netshoot
@@ -567,9 +567,9 @@ entries:
       yunna.net/category-zh: 实用工具
     apiVersion: v2
     appVersion: 2.11.1
-    created: "2024-12-25T17:33:28.455263956Z"
+    created: "2024-12-25T17:39:53.581660773Z"
     description: Nginx反向代理管理工具
-    digest: 25903d05edd78c74e98ba7a53c262c283c7b2c5452fed707095f42c511e5992d
+    digest: 25779d55cfa9fe1093bfeac3242a67a0b503fb988f76c64437ac918f4ac936ab
     home: https://nginxproxymanager.com/
     icon: https://assets.yunna.net/i/2024/12/22/3xbqrz.png
     keywords:
@@ -589,9 +589,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: 3.1.0
-    created: "2024-12-25T17:33:28.455591438Z"
+    created: "2024-12-25T17:39:53.581979599Z"
     description: Node-RED 是一个基于流程的开发工具,用于以可视化方式连接硬件设备、API和在线服务
-    digest: 0799a853e9e125776c30b5ea40aa51ee8f41a19e02f81af22831512db9613b07
+    digest: d214589c24d85f5d666b2cf6f3ec203ba9b60568def8271ed91fb94b365cdbb5
     home: https://nodered.org
     icon: https://assets.yunna.net/i/2024/12/22/3xqd16.png
     keywords:
@@ -614,9 +614,9 @@ entries:
       yunna.net/category-zh: Web服务器
     apiVersion: v2
     appVersion: 1.21.4.1-alpine
-    created: "2024-12-25T17:33:28.455907048Z"
+    created: "2024-12-25T17:39:53.582257798Z"
     description: OpenResty® 是一个基于 Nginx 和 LuaJIT 的全功能 Web 应用服务器
-    digest: d394c6680569daa61a4198d6393ecfa452bfe706ac5c345294d0b73eba298d13
+    digest: a28b32f6c42ddda837ecd64b0fc5baa800f6eba1a6877cbd8d48876cce87906a
     home: https://openresty.org
     icon: https://assets.yunna.net/i/2024/12/26/1t0v1.png
     keywords:
@@ -638,9 +638,9 @@ entries:
       yunna.net/category-zh: 管理工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.456185219Z"
+    created: "2024-12-25T17:39:53.582528364Z"
     description: PhotoPrism® 是一款适用于去中心化网络的 AI 照片应用。它利用最新技术自动标记和查找图片，不会妨碍您。您可以在家中、私人服务器或云端运行它。
-    digest: 5fa6a0c72c85ea2743fee1b72eed2d6ed65e4dae40f0fd7de69218b9dff0f53d
+    digest: 521e0edf27cd24b153a3e91f38f9112feb604a419e91ed025dbba478fe7fb3a2
     home: https://photoprism.app/
     icon: https://assets.yunna.net/i/2024/12/20/su26fz.png
     keywords:
@@ -658,9 +658,9 @@ entries:
       yunna.net/category-zh: 消息队列
     apiVersion: v2
     appVersion: 3.12.0
-    created: "2024-12-25T17:33:28.456452929Z"
+    created: "2024-12-25T17:39:53.582805441Z"
     description: 'RabbitMQ 是一个功能强大的消息队列系统，用于跨分布式系统可靠传递消息。 '
-    digest: e939f421fd67d4408a3eff215962d821b84c2781eb045e63390b44a8404b579e
+    digest: 9ee2e1f93ef5dc6c839d26ca820f0e09b535ebb2febb18e0ff6f2a491ac7e625
     home: https://www.rabbitmq.com
     icon: https://assets.yunna.net/i/2024/12/15/10iusta.png
     keywords:
@@ -681,9 +681,9 @@ entries:
       yunna.net/category-zh: 数据库
     apiVersion: v2
     appVersion: "6.2"
-    created: "2024-12-25T17:33:28.456730138Z"
+    created: "2024-12-25T17:39:53.583072821Z"
     description: '部署高可用 Redis 缓存服务，支持持久化存储和主从模式。 '
-    digest: e75108f1a0c132ace30760a68ad5de006f07d58b47742f0b1cada3f5618d091d
+    digest: c8707b38667c02ec4912f4bc3180421b97e523034051b82061c611fa092a3fef
     home: https://redis.io/
     icon: https://assets.yunna.net/i/2024/12/11/ppvd2n.png
     keywords:
@@ -705,7 +705,7 @@ entries:
       yunna.net/category-zh: 工具
     apiVersion: v2
     appVersion: 1.1.9
-    created: "2024-12-25T17:33:28.457000012Z"
+    created: "2024-12-25T17:39:53.583381668Z"
     description: RustDesk - 开源的远程桌面软件
     digest: 23cf207c03fe47cac03084c2915d23e1cdcf98b93445a65c854af3679f9a59e3
     home: https://rustdesk.com
@@ -728,9 +728,9 @@ entries:
       yunna.net/category-zh: 存储
     apiVersion: v2
     appVersion: v2.6.4-alpine
-    created: "2024-12-25T17:33:28.45739459Z"
+    created: "2024-12-25T17:39:53.58381128Z"
     description: SFTPGo 是一个功能齐全的 SFTP 服务器，具有可选的 FTP/S 和 WebDAV 支持。它可用作 S3 或其他云存储服务的前端，支持本地文件系统和各种云存储后端
-    digest: eeb5858b1b6d4fe796557be167b97946e22c3823f39bfc40087153a8978a08cf
+    digest: 996cd633521d6da44bf77f91582edb0fecc26107433e78fe33e6a6e360fd8f8e
     home: https://github.com/drakkan/sftpgo
     icon: https://assets.yunna.net/i/2024/12/22/10fqw9o.png
     keywords:
@@ -754,9 +754,9 @@ entries:
       yunna.net/category-zh: 实用工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.45767231Z"
+    created: "2024-12-25T17:39:53.584091894Z"
     description: 本地PDF处理工具
-    digest: 4071f5e48c1d0a494e1573eb14cfdedcde7dfad7c8e4b426a4698ad0e8a9e783
+    digest: 0921fac5f8b83dbf0beba8c1b246c60570269d08f4073e068d6cc95541fcec4c
     home: https://github.com/Frooodle/Stirling-PDF
     icon: https://assets.yunna.net/i/2024/12/22/3xwuyv.png
     keywords:
@@ -776,9 +776,9 @@ entries:
       yunna.net/category-zh: 协作工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.457984694Z"
+    created: "2024-12-25T17:39:53.584983309Z"
     description: Syncthing 是一个开源的文件同步工具，提供安全的点对点文件同步功能。它能够在多个设备之间保持指定文件夹的内容同步，所有通信都经过加密，确保数据传输的安全性。支持版本控制、冲突检测和自动同步，是团队文件共享和个人数据同步的理想选择。
-    digest: f540d5e4ff61ce5a8db54587f481752415e84d7f53a7e796a2d14e16f284530c
+    digest: ccdef39f8eef28db9d4d7d92088d85cba20774e6d441683f73e596998f1a51a9
     home: https://syncthing.net/
     icon: https://assets.yunna.net/i/2024/12/21/ppz1i2.png
     keywords:
@@ -800,7 +800,7 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: 1.29.1
-    created: "2024-12-25T17:33:28.458290196Z"
+    created: "2024-12-25T17:39:53.585636797Z"
     description: Telegraf 是一个用于收集和发送指标与数据的代理，它可以集成多种数据源，是物联网数据采集的理想选择。
     digest: 0dbcadea973d6d1839640746029a2cdc08efe50ac1e6fdf6743238df97c78c14
     home: https://www.influxdata.com/time-series-platform/telegraf/
@@ -825,7 +825,7 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: '{{ .Values.image.tag }}'
-    created: "2024-12-25T17:33:28.45879493Z"
+    created: "2024-12-25T17:39:53.586220187Z"
     description: '基于 Ubuntu 的 Helm Chart，内置 SSH 服务和常用工具。 '
     digest: 5b5cca3e81c018a2ee3463493bb81a90342bb5369e817c5274fe8416a6edbf9b
     home: https://hub.docker.com/repository/docker/nidexiong/ubuntu-ssh
@@ -848,9 +848,9 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.458546385Z"
+    created: "2024-12-25T17:39:53.585930105Z"
     description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
-    digest: fc4b6344df7876dfcbe7d4b1d50c32f8e266626ecb90b2d50ce55f5076d36cba
+    digest: 13011a37240257718db3e4d87dbca6146d189b5edd2ac738d7a456baa26e1203
     home: https://github.com/example/ubuntu-ssh
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -871,10 +871,10 @@ entries:
       yunna.net/category-zh: 监控工具
     apiVersion: v2
     appVersion: latest
-    created: "2024-12-25T17:33:28.459124035Z"
+    created: "2024-12-25T17:39:53.586541407Z"
     description: 'Uptime Kuma 是一个开源、轻量的自托管监控工具，支持对网站、服务器和 API 的正常运行时间进行实时监控，帮助用户快速了解服务的运行状况。它提供友好的用户界面、支持多种通知方式（如邮件、Telegram、Slack
       等）以及历史记录追踪功能。 '
-    digest: 921d3aadd0fdc20d29b55bf02e949c3908ea1f0d73f1bc123da14f864f9bfd3c
+    digest: 9cb075af9fc1a59c4287c354e59aae0221c9489dc085c63ee4d8c3e2c088f1d7
     home: https://github.com/louislam/uptime-kuma
     icon: https://assets.yunna.net/i/2024/12/13/sr129s.png
     keywords:
@@ -891,4 +891,4 @@ entries:
     urls:
     - https://jianzhis.github.io/TestMirror/test/uptime-kuma-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-25T17:33:28.446651935Z"
+generated: "2024-12-25T17:39:53.573033166Z"
