@@ -1,0 +1,31 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: rustdesk/rustdesk-server
+  tag: 1.1.9
+  pullPolicy: IfNotPresent
+services:
+  - name: relay
+    port: 21117
+    targetPort: "21117"
+    protocol: TCP
+  - name: id-reg
+    port: 21119
+    targetPort: "21119"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: RELAY
+    value: "1"
