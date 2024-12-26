@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: josephdark/dst-server
+  repository: jamesits/dst-server
   tag: latest
   pullPolicy: IfNotPresent
 services:
