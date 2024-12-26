@@ -35,3 +35,6 @@ env:
   env3:
     name: DASHBOARD_PWD
     value: admin
+  env4:
+    name: DASHBOARD_ADDR
+    value: 0.0.0.0

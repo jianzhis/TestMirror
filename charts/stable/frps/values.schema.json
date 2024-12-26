@@ -134,6 +134,22 @@
               "default": "admin"
             }
           }
+        },
+        "env4": {
+          "type": "object",
+          "title": "环境变量4",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "DASHBOARD_ADDR"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "0.0.0.0"
+            }
+          }
         }
       }
     }
