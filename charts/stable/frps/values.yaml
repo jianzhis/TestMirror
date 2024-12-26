@@ -1,8 +1,8 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: snowdreamtech/frps
-  tag: 0.51.3
+  repository: fatedier/frps
+  tag: 0.61.1
   pullPolicy: IfNotPresent
 services:
   - name: server

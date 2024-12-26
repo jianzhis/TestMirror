@@ -2,7 +2,7 @@ apiVersion: v2
 name: frps
 description: 快速反向代理服务器,用于内网穿透和游戏联机
 version: 1.0.0
-appVersion: 0.51.3
+appVersion: 0.61.1
 home: https://github.com/fatedier/frp
 sources:
   - https://github.com/fatedier/frp
