@@ -1,0 +1,18 @@
+apiVersion: v2
+name: dst-server
+description: 饥荒联机版独立服务器,支持模组和存档管理
+version: 1.0.0
+appVersion: latest
+home: https://github.com/Jamesits/docker-dst-server
+sources:
+  - https://github.com/Jamesits/docker-dst-server
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: game
+  yunna.net/category-zh: 游戏
+keywords:
+  - game
+  - Self-hosted
+icon: https://assets.yunna.net/i/2024/12/15/ci9paz.png

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "centos.fullname" . }}
+  name: {{ include "frps.fullname" . }}
   labels:
-    {{- include "centos.labels" . | nindent 4 }}
+    {{- include "frps.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "centos.selectorLabels" . | nindent 6 }}
+      {{- include "frps.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "centos.labels" . | nindent 8 }}
-        {{- include "centos.selectorLabels" . | nindent 8 }}
+        {{- include "frps.labels" . | nindent 8 }}
+        {{- include "frps.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ include "centos.name" . }}
+        - name: {{ include "frps.name" . }}
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
@@ -25,7 +25,6 @@ spec:
               containerPort: {{ .port }}
               protocol: {{ .protocol }}
             {{- end }}
-            
           env:
             {{- if kindIs "array" .Values.env }}
             {{- range .Values.env }}
@@ -42,13 +41,12 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: {{ include "centos.name" . }}-data
+            - name: {{ include "frps.name" . }}-data
               mountPath: /app/data
-              
           {{- end }}
       {{- if .Values.persistence.enabled }}
       volumes:
-        - name: {{ include "centos.name" . }}-data
+        - name: {{ include "frps.name" . }}-data
           persistentVolumeClaim:
-            claimName: {{ include "centos.fullname" . }}-pvc
+            claimName: {{ include "frps.fullname" . }}-pvc
       {{- end }}

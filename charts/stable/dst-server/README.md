@@ -1,7 +1,7 @@
-# centos
+# dst-server
 
 ## 介绍
-基于CentOS 7的容器镜像，预装SSH服务和常用工具，适用于开发和测试环境
+饥荒联机版独立服务器,支持模组和存档管理
 
 ## 主要功能
 - Kubernetes 应用部署
@@ -13,14 +13,12 @@
 | 参数名称 | 描述 | 类型 | 默认值 |
 |---------|-----|------|--------|
 | `replicaCount` | 副本数量 | integer | 1 |
-| `image.repository` | 应用名称 | string | centos |
-| `image.tag` | 应用标签 | string | 7 |
+| `image.repository` | 应用名称 | string | jamesits/dst-server |
+| `image.tag` | 应用标签 | string | latest |
 | `image.pullPolicy` | 应用拉取策略 | string | IfNotPresent |
-| `resources.limits.cpu` | CPU 限制 | string | 1000m |
-| `resources.limits.memory` | 内存限制 | string | 1024Mi |
-| `env.ROOT_PASSWORD.value` | root用户密码 | string | "yunna@2024" |
-| `env.SSH_PORT.value` | SSH端口 | string | "22" |
-| `env.TZ.value` | 时区设置 | string | "Asia/Shanghai" |
+| `resources.limits.cpu` | CPU 限制 | string | 2000m |
+| `resources.limits.memory` | 内存限制 | string | 2048Mi |
+| `env.CLUSTER_TOKEN.value` | 集群令牌 | string | "" |
 
 ## 部署步骤
 1. 输入配置参数
@@ -28,7 +26,7 @@
 3. 立即部署
 
 ## 使用说明
-基于CentOS 7的容器镜像，预装SSH服务和常用工具，适用于开发和测试环境
+饥荒联机版独立服务器,支持模组和存档管理
 
 ## 故障排除
 1. Pod 无法启动

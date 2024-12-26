@@ -1,0 +1,18 @@
+apiVersion: v2
+name: netmaker
+description: 创建和管理快速、安全的虚拟网络,适用于游戏联机
+version: 1.0.0
+appVersion: 0.20.1
+home: https://github.com/gravitl/netmaker
+sources:
+  - https://github.com/gravitl/netmaker
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: network
+  yunna.net/category-zh: 网络工具
+keywords:
+  - vpn
+  - Self-hosted
+icon: https://assets.yunna.net/i/2024/12/15/ci9paz.png

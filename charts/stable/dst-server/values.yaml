@@ -1,0 +1,27 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: jamesits/dst-server
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: game
+    port: 10999
+    targetPort: "10999"
+    protocol: UDP
+resources:
+  limits:
+    cpu: 2000m
+    memory: 2048Mi
+  requests:
+    cpu: 1000m
+    memory: 1024Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: CLUSTER_TOKEN
+    value: ""
