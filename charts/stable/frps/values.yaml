@@ -26,7 +26,7 @@ env:
     value: "7500"
   env2:
     name: FRPS_TOKEN
-    value: your_secure_token
+    value: 随便你填个你记得住的密码
   env3:
     name: FRPS_BIND_PORT
     value: "7000"
