@@ -86,7 +86,56 @@
     "env": {
       "type": "object",
       "title": "环境变量",
-      "properties": {}
+      "properties": {
+        "env1": {
+          "type": "object",
+          "title": "环境变量1",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "DASHBOARD_PORT"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "7500"
+            }
+          }
+        },
+        "env2": {
+          "type": "object",
+          "title": "环境变量2",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "DASHBOARD_USER"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "admin"
+            }
+          }
+        },
+        "env3": {
+          "type": "object",
+          "title": "环境变量3",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "DASHBOARD_PWD"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "admin"
+            }
+          }
+        }
+      }
     }
   },
   "required": [

@@ -18,7 +18,9 @@
 | `image.pullPolicy` | 应用拉取策略 | string | IfNotPresent |
 | `resources.limits.cpu` | CPU 限制 | string | 500m |
 | `resources.limits.memory` | 内存限制 | string | 512Mi |
-
+| `env.DASHBOARD_PORT.value` | UI端口 | string | "7500" |
+| `env.DASHBOARD_USER.value` | UI用户名 | string | "admin" |
+| `env.DASHBOARD_PWD.value` | UI密码 | string | "admin" |
 
 ## 部署步骤
 1. 输入配置参数
@@ -29,17 +31,17 @@
 # 使用说明
 
 ## UI界面使用
-
-1. 使用浏览器访问管理界面: `http://<your-server-ip>:7000`
-2. 在管理界面中您可以:
-   - 查看当前所有代理连接状态
-   - 监控实时流量使用情况
-   - 管理客户端连接
-   - 查看详细日志信息
+1. 访问管理界面: `http://<your-server-ip>:7500`
+2. 默认用户名: admin
+3. 默认密码: admin
+4. 在管理界面中您可以:
+   - 查看当前连接状态
+   - 监控流量使用情况
+   - 管理代理配置
 
 ## 客户端配置说明
 
-1. 编写frpc.ini配置文件
+1. 配置frpc.ini文件
 ```ini
 [common]
 server_addr = <your-server-ip>
