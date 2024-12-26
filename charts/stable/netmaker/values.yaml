@@ -34,7 +34,7 @@ env:
     value: 0.0.0.0
   env3:
     name: NETMAKER_BASE_DOMAIN
-    value: 111.180.193.51
+    value: localhost
   env4:
     name: CORS_ALLOWED_ORIGIN
     value: "*"
