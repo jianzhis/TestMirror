@@ -28,7 +28,7 @@ persistence:
 env:
   env1:
     name: DASHBOARD_PORT
-    value: "0.0.0.0:7500"
+    value: "7500"
   env2:
     name: DASHBOARD_USER
     value: admin
