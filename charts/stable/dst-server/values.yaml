@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: jamesits/dst-server
+  repository: snowdreamtech/dst-server
   tag: latest
   pullPolicy: IfNotPresent
 services:
@@ -23,5 +23,26 @@ persistence:
   storageClass: local
 env:
   env1:
-    name: CLUSTER_TOKEN
+    name: CLUSTER_NAME
+    value: 我的饥荒服务器
+  env2:
+    name: CLUSTER_DESCRIPTION
+    value: 这是一个饥荒服务器
+  env3:
+    name: CLUSTER_PASSWORD
     value: ""
+  env4:
+    name: CLUSTER_INTENTION
+    value: cooperative
+  env5:
+    name: GAMEMODE
+    value: survival
+  env6:
+    name: MAX_PLAYERS
+    value: "6"
+  env7:
+    name: PVP
+    value: "false"
+  env8:
+    name: PAUSE_WHEN_EMPTY
+    value: "true"

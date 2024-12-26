@@ -1,11 +1,11 @@
 apiVersion: v2
 name: dst-server
-description: 饥荒联机版独立服务器,支持模组和存档管理
+description: 饥荒联机版独立服务器
 version: 1.0.0
 appVersion: latest
-home: https://github.com/Jamesits/docker-dst-server
+home: https://www.klei.com/games/dont-starve-together
 sources:
-  - https://github.com/Jamesits/docker-dst-server
+  - https://www.klei.com/games/dont-starve-together
 maintainers:
   - name: niehaoran
     email: niehaoran@yunna.net

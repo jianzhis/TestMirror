@@ -94,12 +94,124 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "CLUSTER_TOKEN"
+              "default": "CLUSTER_NAME"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "我的饥荒服务器"
+            }
+          }
+        },
+        "env2": {
+          "type": "object",
+          "title": "环境变量2",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "CLUSTER_DESCRIPTION"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "这是一个饥荒服务器"
+            }
+          }
+        },
+        "env3": {
+          "type": "object",
+          "title": "环境变量3",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "CLUSTER_PASSWORD"
             },
             "value": {
               "type": "string",
               "title": "变量值",
               "default": ""
+            }
+          }
+        },
+        "env4": {
+          "type": "object",
+          "title": "环境变量4",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "CLUSTER_INTENTION"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "cooperative"
+            }
+          }
+        },
+        "env5": {
+          "type": "object",
+          "title": "环境变量5",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "GAMEMODE"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "survival"
+            }
+          }
+        },
+        "env6": {
+          "type": "object",
+          "title": "环境变量6",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "MAX_PLAYERS"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "6"
+            }
+          }
+        },
+        "env7": {
+          "type": "object",
+          "title": "环境变量7",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "PVP"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "false"
+            }
+          }
+        },
+        "env8": {
+          "type": "object",
+          "title": "环境变量8",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "PAUSE_WHEN_EMPTY"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "true"
             }
           }
         }
