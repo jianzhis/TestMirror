@@ -99,7 +99,7 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "secretkey"
+              "default": "netmaker123"
             }
           }
         },
@@ -131,7 +131,7 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "0.0.0.0"
+              "default": "111.180.193.51"
             }
           }
         },
@@ -163,7 +163,7 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "emqx-broker"
+              "default": "111.180.193.51"
             }
           }
         },
@@ -179,7 +179,39 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "1883"
+              "default": "30098"
+            }
+          }
+        },
+        "env7": {
+          "type": "object",
+          "title": "环境变量7",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "MQ_USERNAME"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "admin"
+            }
+          }
+        },
+        "env8": {
+          "type": "object",
+          "title": "环境变量8",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "MQ_PASSWORD"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "admin"
             }
           }
         }

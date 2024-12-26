@@ -9,12 +9,10 @@ services:
     port: 8082
     targetPort: "8082"
     protocol: TCP
-    comment: Web界面服务端口
   - name: api
     port: 8081
     targetPort: "8081"
     protocol: TCP
-    comment: API服务端口
 resources:
   limits:
     cpu: 1000m
@@ -30,19 +28,25 @@ persistence:
 env:
   env1:
     name: MASTER_KEY
-    value: secretkey
+    value: yunna123
   env2:
     name: SERVER_HOST
     value: 0.0.0.0
   env3:
     name: NETMAKER_BASE_DOMAIN
-    value: 0.0.0.0
+    value: 111.180.193.51
   env4:
     name: CORS_ALLOWED_ORIGIN
     value: "*"
   env5:
     name: MQ_HOST
-    value: emqx-broker
+    value: 111.180.193.51
   env6:
     name: MQ_PORT
     value: "1883"
+  env7:
+    name: MQ_USERNAME
+    value: admin
+  env8:
+    name: MQ_PASSWORD
+    value: admin
