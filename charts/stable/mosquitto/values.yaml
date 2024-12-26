@@ -1,0 +1,34 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: eclipse-mosquitto
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: mqtt
+    port: 1883
+    targetPort: "1883"
+    protocol: TCP
+  - name: websocket
+    port: 9001
+    targetPort: "9001"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: MOSQUITTO_USERNAME
+    value: admin
+  env2:
+    name: MOSQUITTO_PASSWORD
+    value: public
