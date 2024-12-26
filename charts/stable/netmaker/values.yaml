@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
   repository: gravitl/netmaker
-  tag: v0.20.2
+  tag: 0.20.2
   pullPolicy: IfNotPresent
 services:
   - name: ui
@@ -30,14 +30,11 @@ env:
     name: MASTER_KEY
     value: secretkey
   env2:
-    name: NETMAKER_BASE_DOMAIN
-    value: localhost
-  env3:
     name: SERVER_HOST
     value: localhost
+  env3:
+    name: NETMAKER_BASE_DOMAIN
+    value: localhost
   env4:
-    name: API_PORT
-    value: "8081"
-  env5:
     name: CORS_ALLOWED_ORIGIN
     value: http://localhost:8082

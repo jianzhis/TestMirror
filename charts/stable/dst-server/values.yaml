@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
-  repository: snowdreamtech/dst-server
+  repository: josephdark/dst-server
   tag: latest
   pullPolicy: IfNotPresent
 services:

@@ -14,15 +14,14 @@
 |---------|-----|------|--------|
 | `replicaCount` | 副本数量 | integer | 1 |
 | `image.repository` | 应用名称 | string | gravitl/netmaker |
-| `image.tag` | 应用标签 | string | v0.20.2 |
+| `image.tag` | 应用标签 | string | 0.20.2 |
 | `image.pullPolicy` | 应用拉取策略 | string | IfNotPresent |
 | `resources.limits.cpu` | CPU 限制 | string | 1000m |
 | `resources.limits.memory` | 内存限制 | string | 1024Mi |
 | `env.MASTER_KEY.value` | 主密钥 | string | "secretkey" |
-| `env.NETMAKER_BASE_DOMAIN.value` | 基础域名 | string | "localhost" |
 | `env.SERVER_HOST.value` | 服务器域名 | string | "localhost" |
-| `env.API_PORT.value` | API端口 | string | "8081" |
-| `env.CORS_ALLOWED_ORIGIN.value` | CORS配置 | string | "http://localhost:8082" |
+| `env.NETMAKER_BASE_DOMAIN.value` | 基础域名 | string | "localhost" |
+| `env.CORS_ALLOWED_ORIGIN.value` | UI访问域名 | string | "http://localhost:8082" |
 
 ## 部署步骤
 1. 输入配置参数

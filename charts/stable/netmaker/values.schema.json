@@ -110,7 +110,7 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "NETMAKER_BASE_DOMAIN"
+              "default": "SERVER_HOST"
             },
             "value": {
               "type": "string",
@@ -126,7 +126,7 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "SERVER_HOST"
+              "default": "NETMAKER_BASE_DOMAIN"
             },
             "value": {
               "type": "string",
@@ -138,22 +138,6 @@
         "env4": {
           "type": "object",
           "title": "环境变量4",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "API_PORT"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "8081"
-            }
-          }
-        },
-        "env5": {
-          "type": "object",
-          "title": "环境变量5",
           "properties": {
             "name": {
               "type": "string",
