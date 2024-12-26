@@ -38,3 +38,6 @@ env:
   env4:
     name: DASHBOARD_ADDR
     value: 0.0.0.0
+  env5:
+    name: DASHBOARD_BIND_PORT
+    value: "7500"
