@@ -2,7 +2,7 @@ apiVersion: v2
 name: netmaker
 description: 创建和管理WireGuard VPN网络的平台
 version: 1.0.0
-appVersion: 0.20.2
+appVersion: latest
 home: https://netmaker.org
 sources:
   - https://github.com/gravitl/netmaker

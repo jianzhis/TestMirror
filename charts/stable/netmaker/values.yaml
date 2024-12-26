@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
   repository: gravitl/netmaker
-  tag: 0.20.2
+  tag: latest
   pullPolicy: IfNotPresent
 services:
   - name: ui
