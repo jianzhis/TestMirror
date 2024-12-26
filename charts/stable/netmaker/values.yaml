@@ -28,4 +28,4 @@ persistence:
 env:
   env1:
     name: SERVER_HOST
-    value: netmaker.example.com
+    value: localhost:8081
