@@ -115,7 +115,7 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "localhost"
+              "default": "0.0.0.0"
             }
           }
         },
@@ -131,7 +131,7 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "localhost"
+              "default": "0.0.0.0"
             }
           }
         },
@@ -147,7 +147,39 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "http://localhost:8082"
+              "default": "*"
+            }
+          }
+        },
+        "env5": {
+          "type": "object",
+          "title": "环境变量5",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "MQ_HOST"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "emqx-broker"
+            }
+          }
+        },
+        "env6": {
+          "type": "object",
+          "title": "环境变量6",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "MQ_PORT"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "1883"
             }
           }
         }

@@ -9,10 +9,12 @@ services:
     port: 8082
     targetPort: "8082"
     protocol: TCP
+    comment: Web界面服务端口
   - name: api
     port: 8081
     targetPort: "8081"
     protocol: TCP
+    comment: API服务端口
 resources:
   limits:
     cpu: 1000m
@@ -31,10 +33,16 @@ env:
     value: secretkey
   env2:
     name: SERVER_HOST
-    value: localhost
+    value: 0.0.0.0
   env3:
     name: NETMAKER_BASE_DOMAIN
-    value: localhost
+    value: 0.0.0.0
   env4:
     name: CORS_ALLOWED_ORIGIN
-    value: http://localhost:8082
+    value: "*"
+  env5:
+    name: MQ_HOST
+    value: emqx-broker
+  env6:
+    name: MQ_PORT
+    value: "1883"
