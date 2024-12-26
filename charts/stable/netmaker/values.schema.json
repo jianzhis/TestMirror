@@ -94,12 +94,76 @@
             "name": {
               "type": "string",
               "title": "变量名称",
+              "default": "MASTER_KEY"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "secretkey"
+            }
+          }
+        },
+        "env2": {
+          "type": "object",
+          "title": "环境变量2",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "NETMAKER_BASE_DOMAIN"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "localhost"
+            }
+          }
+        },
+        "env3": {
+          "type": "object",
+          "title": "环境变量3",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
               "default": "SERVER_HOST"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "netmaker.example.com"
+              "default": "localhost"
+            }
+          }
+        },
+        "env4": {
+          "type": "object",
+          "title": "环境变量4",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "API_PORT"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "8081"
+            }
+          }
+        },
+        "env5": {
+          "type": "object",
+          "title": "环境变量5",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "变量名称",
+              "default": "CORS_ALLOWED_ORIGIN"
+            },
+            "value": {
+              "type": "string",
+              "title": "变量值",
+              "default": "http://localhost:8082"
             }
           }
         }
