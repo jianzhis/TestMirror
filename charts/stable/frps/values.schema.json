@@ -94,12 +94,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "FRPS_DASHBOARD_PORT"
+              "default": "FRP_TOKEN"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "7500"
+              "default": "12345678"
             }
           }
         },
@@ -110,12 +110,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "FRPS_TOKEN"
+              "default": "FRP_DASHBOARD_USER"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "your_secure_token"
+              "default": "admin"
             }
           }
         },
@@ -126,12 +126,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "FRPS_BIND_PORT"
+              "default": "FRP_DASHBOARD_PWD"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "7000"
+              "default": "admin"
             }
           }
         }

@@ -1,20 +1,19 @@
 apiVersion: v2
 name: frps
-description: FRPS (快速反向代理服务器也可以用来联机游戏)，用于实现内网穿透和本地服务的公开。
-version: 0.61.1
-appVersion: v0.61.1
+description: 快速反向代理服务器,用于内网穿透和游戏联机
+version: 1.0.0
+appVersion: latest
 home: https://github.com/fatedier/frp
 sources:
   - https://github.com/fatedier/frp
 maintainers:
-  - name: niehaoran
-    email: niehaoran@yunna.net
+  - name: fatedier
+    email: fatedier@gmail.com
 annotations:
-  yunna.net/category: networking
-  yunna.net/category-zh: 网络
+  yunna.net/category: middleware
+  yunna.net/category-zh: 中间件
 keywords:
-  - 反向代理
-  - frp
-  - 内网穿透
-  - 隧道
+  - proxy
+  - reverse-proxy
+  - Self-hosted
 icon: https://assets.yunna.net/i/2024/12/26/126fbbq.jpg
