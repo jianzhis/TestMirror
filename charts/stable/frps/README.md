@@ -2,7 +2,7 @@
 
 ## 介绍
 
-快速反向代理服务器,用于内网穿透和游戏联机
+FRPS (快速反向代理服务器)，用于实现内网穿透和本地服务的公开。
 
 ## 主要功能
 
@@ -13,18 +13,17 @@
 
 ## 配置参数说明
 
-| 参数名称                   | 描述           | 类型    | 默认值        |
-| -------------------------- | -------------- | ------- | ------------- |
-| `replicaCount`             | 副本数量       | integer | 1             |
-| `image.repository`         | 应用名称       | string  | fatedier/frps |
-| `image.tag`                | 应用标签       | string  | v0.61.1       |
-| `image.pullPolicy`         | 应用拉取策略   | string  | IfNotPresent  |
-| `resources.limits.cpu`     | CPU 限制       | string  | 500m          |
-| `resources.limits.memory`  | 内存限制       | string  | 512Mi         |
-| `env.DASHBOARD_PORT.value` | DASHBOARD_PORT | string  | "7500"        |
-| `env.DASHBOARD_USER.value` | DASHBOARD_USER | string  | "admin"       |
-| `env.DASHBOARD_PWD.value`  | DASHBOARD_PWD  | string  | "admin"       |
-| `env.DASHBOARD_ADDR.value` | DASHBOARD_ADDR | string  | "0.0.0.0"     |
+| 参数名称                        | 描述                       | 类型    | 默认值              |
+| ------------------------------- | -------------------------- | ------- | ------------------- |
+| `replicaCount`                  | 副本数量                   | integer | 1                   |
+| `image.repository`              | 应用名称                   | string  | fatedier/frps       |
+| `image.tag`                     | 应用标签                   | string  | v0.61.1             |
+| `image.pullPolicy`              | 应用拉取策略               | string  | IfNotPresent        |
+| `resources.limits.cpu`          | CPU 限制                   | string  | undefined           |
+| `resources.limits.memory`       | 内存限制                   | string  | undefined           |
+| `env.FRPS_DASHBOARD_PORT.value` | 仪表盘服务的端口。         | string  | "7500"              |
+| `env.FRPS_TOKEN.value`          | 用于客户端身份验证的令牌。 | string  | "your_secure_token" |
+| `env.FRPS_BIND_PORT.value`      | 用于接受客户端连接的端口。 | string  | "7000"              |
 
 ## 部署步骤
 

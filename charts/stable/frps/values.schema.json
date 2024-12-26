@@ -21,13 +21,13 @@
               "type": "string",
               "title": "CPU限制",
               "pattern": "^[0-9]+m?$",
-              "default": "500m"
+              "default": "1000m"
             },
             "memory": {
               "type": "string",
               "title": "内存限制",
               "pattern": "^[0-9]+(Mi|Gi)$",
-              "default": "512Mi"
+              "default": "1024Mi"
             }
           }
         },
@@ -39,13 +39,13 @@
               "type": "string",
               "title": "CPU请求",
               "pattern": "^[0-9]+m?$",
-              "default": "100m"
+              "default": "500m"
             },
             "memory": {
               "type": "string",
               "title": "内存请求",
               "pattern": "^[0-9]+(Mi|Gi)$",
-              "default": "128Mi"
+              "default": "512Mi"
             }
           }
         }
@@ -94,7 +94,7 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "DASHBOARD_PORT"
+              "default": "FRPS_DASHBOARD_PORT"
             },
             "value": {
               "type": "string",
@@ -110,12 +110,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "DASHBOARD_USER"
+              "default": "FRPS_TOKEN"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "admin"
+              "default": "your_secure_token"
             }
           }
         },
@@ -126,28 +126,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "DASHBOARD_PWD"
+              "default": "FRPS_BIND_PORT"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "admin"
-            }
-          }
-        },
-        "env4": {
-          "type": "object",
-          "title": "环境变量4",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "DASHBOARD_ADDR"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "0.0.0.0"
+              "default": "7000"
             }
           }
         }
