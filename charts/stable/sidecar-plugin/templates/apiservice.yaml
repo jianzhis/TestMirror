@@ -6,6 +6,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     {{- include "sidecar-plugin.labels" . | nindent 4 }}
   annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "-5"
     meta.helm.sh/release-name: {{ .Release.Name }}
     meta.helm.sh/release-namespace: {{ .Release.Namespace }}
 spec:
