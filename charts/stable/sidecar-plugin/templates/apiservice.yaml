@@ -1,0 +1,13 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  name: v1alpha1.sidecar.yunna.net
+spec:
+  group: sidecar.yunna.net
+  version: v1alpha1
+  service:
+    name: {{ include "sidecar-plugin.fullname" . }}
+    namespace: {{ .Release.Namespace }}
+  groupPriorityMinimum: 100
+  versionPriority: 100
+  insecureSkipTLSVerify: true
