@@ -1,7 +1,13 @@
 apiVersion: apiregistration.k8s.io/v1
-kind: APIService
+kind: APIService 
 metadata:
   name: v1alpha1.sidecar.yunna.net
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    {{- include "sidecar-plugin.labels" . | nindent 4 }}
+  annotations:
+    meta.helm.sh/release-name: {{ .Release.Name }}
+    meta.helm.sh/release-namespace: {{ .Release.Namespace }}
 spec:
   group: sidecar.yunna.net
   version: v1alpha1
@@ -9,5 +15,5 @@ spec:
     name: {{ include "sidecar-plugin.fullname" . }}
     namespace: {{ .Release.Namespace }}
   groupPriorityMinimum: 100
-  versionPriority: 100
+  versionPriority: 100 
   insecureSkipTLSVerify: true
