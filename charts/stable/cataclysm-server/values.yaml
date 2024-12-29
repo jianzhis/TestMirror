@@ -1,0 +1,30 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: onlywade/cataclysm-dda
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: game
+    port: 6112
+    targetPort: "6112"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: SERVER_PORT
+    value: "6112"
+  env2:
+    name: SERVER_NAME
+    value: CDDA Server

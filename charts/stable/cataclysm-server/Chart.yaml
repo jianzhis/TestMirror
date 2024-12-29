@@ -1,0 +1,19 @@
+apiVersion: v2
+name: cataclysm-server
+description: 末日生存游戏未转变者的多人联机服务器，支持多人合作探索和生存
+version: 1.0.0
+appVersion: latest
+home: https://github.com/CleverRaven/Cataclysm-DDA
+sources:
+  - https://github.com/CleverRaven/Cataclysm-DDA
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: game-server
+  yunna.net/category-zh: 游戏服务器
+keywords:
+  - Game Server
+  - CDDA
+  - Survival
+icon: https://assets.yunna.net/i/2024/12/30/u489a.png

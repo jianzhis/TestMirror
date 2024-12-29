@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "netmaker.fullname" . }}
+  name: {{ include "cataclysm-server.fullname" . }}
   labels:
-    {{- include "netmaker.labels" . | nindent 4 }}
+    {{- include "cataclysm-server.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "netmaker.selectorLabels" . | nindent 6 }}
+      {{- include "cataclysm-server.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "netmaker.labels" . | nindent 8 }}
-        {{- include "netmaker.selectorLabels" . | nindent 8 }}
+        {{- include "cataclysm-server.labels" . | nindent 8 }}
+        {{- include "cataclysm-server.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ include "netmaker.name" . }}
+        - name: {{ include "cataclysm-server.name" . }}
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
@@ -41,12 +41,12 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: {{ include "netmaker.name" . }}-data
+            - name: {{ include "cataclysm-server.name" . }}-data
               mountPath: /app/data
           {{- end }}
       {{- if .Values.persistence.enabled }}
       volumes:
-        - name: {{ include "netmaker.name" . }}-data
+        - name: {{ include "cataclysm-server.name" . }}-data
           persistentVolumeClaim:
-            claimName: {{ include "netmaker.fullname" . }}-pvc
+            claimName: {{ include "cataclysm-server.fullname" . }}-pvc
       {{- end }}

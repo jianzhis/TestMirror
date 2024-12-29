@@ -21,13 +21,13 @@
               "type": "string",
               "title": "CPU限制",
               "pattern": "^[0-9]+m?$",
-              "default": "1000m"
+              "default": "4000m"
             },
             "memory": {
               "type": "string",
               "title": "内存限制",
               "pattern": "^[0-9]+(Mi|Gi)$",
-              "default": "1024Mi"
+              "default": "4096Mi"
             }
           }
         },
@@ -39,13 +39,13 @@
               "type": "string",
               "title": "CPU请求",
               "pattern": "^[0-9]+m?$",
-              "default": "500m"
+              "default": "2000m"
             },
             "memory": {
               "type": "string",
               "title": "内存请求",
               "pattern": "^[0-9]+(Mi|Gi)$",
-              "default": "512Mi"
+              "default": "2048Mi"
             }
           }
         }
@@ -94,12 +94,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "MASTER_KEY"
+              "default": "SRCDS_TOKEN"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "netmaker123"
+              "default": ""
             }
           }
         },
@@ -110,12 +110,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "SERVER_HOST"
+              "default": "SRCDS_PW"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "0.0.0.0"
+              "default": ""
             }
           }
         },
@@ -126,92 +126,12 @@
             "name": {
               "type": "string",
               "title": "变量名称",
-              "default": "NETMAKER_BASE_DOMAIN"
+              "default": "SRCDS_RCONPW"
             },
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "111.180.193.51"
-            }
-          }
-        },
-        "env4": {
-          "type": "object",
-          "title": "环境变量4",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "CORS_ALLOWED_ORIGIN"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "*"
-            }
-          }
-        },
-        "env5": {
-          "type": "object",
-          "title": "环境变量5",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "MQ_HOST"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "111.180.193.51"
-            }
-          }
-        },
-        "env6": {
-          "type": "object",
-          "title": "环境变量6",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "MQ_PORT"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "30098"
-            }
-          }
-        },
-        "env7": {
-          "type": "object",
-          "title": "环境变量7",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "MQ_USERNAME"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "admin"
-            }
-          }
-        },
-        "env8": {
-          "type": "object",
-          "title": "环境变量8",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "变量名称",
-              "default": "MQ_PASSWORD"
-            },
-            "value": {
-              "type": "string",
-              "title": "变量值",
-              "default": "admin"
+              "default": ""
             }
           }
         }

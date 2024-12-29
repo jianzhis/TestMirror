@@ -1,0 +1,37 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: lloesche/valheim-server
+  tag: latest
+  pullPolicy: IfNotPresent
+services:
+  - name: game
+    port: 2456
+    targetPort: "2456"
+    protocol: UDP
+  - name: game-2
+    port: 2457
+    targetPort: "2457"
+    protocol: UDP
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4096Mi
+  requests:
+    cpu: 1000m
+    memory: 2048Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: local
+env:
+  env1:
+    name: SERVER_NAME
+    value: Valheim Server
+  env2:
+    name: WORLD_NAME
+    value: Dedicated
+  env3:
+    name: SERVER_PASS
+    value: ""

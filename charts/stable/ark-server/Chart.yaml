@@ -1,0 +1,19 @@
+apiVersion: v2
+name: ark-server
+description: 方舟生存进化多人联机服务器，支持PVE和PVP模式，可驯服和培育恐龙
+version: 1.0.0
+appVersion: latest
+home: https://github.com/thmhoag/arkserver
+sources:
+  - https://github.com/thmhoag/arkserver
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: game-server
+  yunna.net/category-zh: 游戏服务器
+keywords:
+  - Game Server
+  - Steam
+  - ARK
+icon: https://assets.yunna.net/i/2024/12/30/sqp8p.png

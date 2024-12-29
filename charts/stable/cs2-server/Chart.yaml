@@ -1,0 +1,19 @@
+apiVersion: v2
+name: cs2-server
+description: CS2竞技对抗服务器，支持自定义地图和比赛模式
+version: 1.0.0
+appVersion: latest
+home: https://github.com/CM2Walki/steamcmd
+sources:
+  - https://github.com/CM2Walki/steamcmd
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: game-server
+  yunna.net/category-zh: 游戏服务器
+keywords:
+  - Game Server
+  - Steam
+  - CS2
+icon: https://assets.yunna.net/i/2024/12/30/xd146.png
