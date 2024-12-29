@@ -1,0 +1,4 @@
+image:
+  repository: registry-2.yunna.net/niehaoran/sidecar-plugin
+  tag: latest
+  pullPolicy: IfNotPresent

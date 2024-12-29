@@ -1,0 +1,5 @@
+apiVersion: v2
+name: sidecar-plugin
+description: A plugin system for KubeSphere
+version: 0.1.0
+type: application
