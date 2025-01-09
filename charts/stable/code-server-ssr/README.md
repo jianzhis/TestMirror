@@ -43,12 +43,13 @@
 proxy-manager
 ```
 
-2. 每次需要使用代理服务器网络请一定要添加-proxychains4
+2. 容器会自动使用第一个节点
 
 ```bash
-proxychains4 命令
-proxychains4 git clone 仓库
-proxychains4 curl 网址
+查看所有节点：proxy-manager list
+切换节点：proxy-manager switch <node_id>
+停止代理：proxy-manager stop
+查看状态：proxy-manager status
 ```
 
 2. 做了一个通宵才搞定，大家一定要点个收藏，谢谢！
