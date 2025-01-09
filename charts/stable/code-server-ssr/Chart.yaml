@@ -1,0 +1,20 @@
+apiVersion: v2
+name: code-server-ssr
+description: 支持SSR代理的在线VSCode开发环境的特质版本
+version: 1.0.0
+appVersion: latest
+home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
+sources:
+  - https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
+maintainers:
+  - name: niehaoran
+    email: niehaoran@yunna.net
+annotations:
+  yunna.net/category: development
+  yunna.net/category-zh: 开发工具
+keywords:
+  - 自托管
+  - 在线IDE
+  - VSCode
+  - SSR代理
+icon: https://assets.yunna.net/i/2024/12/15/d8jmxk.png
