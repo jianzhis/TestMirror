@@ -43,6 +43,14 @@
 proxy-manager
 ```
 
+2. 每次需要使用代理服务器网络请一定要添加-proxychains4
+
+```bash
+proxychains4 命令
+proxychains4 git clone 仓库
+proxychains4 curl 网址
+```
+
 2. 做了一个通宵才搞定，大家一定要点个收藏，谢谢！
 
 ### 安装主流语言环境
