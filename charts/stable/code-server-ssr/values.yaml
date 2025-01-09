@@ -12,14 +12,14 @@ services:
 resources:
   limits:
     cpu: 1000m
-    memory: 1024Mi
+    memory: 2000Mi
   requests:
     cpu: 500m
     memory: 512Mi
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 1Gi
+  size: 10Gi
   storageClass: local
 env:
   env1:
