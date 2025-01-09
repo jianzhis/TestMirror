@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   imageRegistry: registry-2.yunna.net
   repository: nidexiong/code-server-ssr
-  tag: 1.0
+  tag: "1.0"
   pullPolicy: IfNotPresent
 services:
   - name: http
