@@ -2,7 +2,7 @@ apiVersion: v2
 name: code-server-ssr
 description: 支持SSR代理的在线VSCode开发环境的特质版本
 version: 1.0.0
-appVersion: "1.0"
+appVersion: latest
 home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
 sources:
   - https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
