@@ -99,7 +99,7 @@
             "value": {
               "type": "string",
               "title": "变量值",
-              "default": "changeme"
+              "default": ""
             }
           }
         }

@@ -5,9 +5,13 @@ image:
   tag: latest
   pullPolicy: Always
 services:
-  - name: http
+  - name: vscode
     port: 8080
     targetPort: "8080"
+    protocol: TCP
+  - name: ssr-proxy
+    port: 1080
+    targetPort: "1080"
     protocol: TCP
 resources:
   limits:
@@ -24,4 +28,4 @@ persistence:
 env:
   env1:
     name: PASSWORD
-    value: changeme
+    value: ""

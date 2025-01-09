@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "code-server-ssr.fullname" . }}
+  name: {{ include "vscode-ssr.fullname" . }}
   labels:
-    {{- include "code-server-ssr.labels" . | nindent 4 }}
+    {{- include "vscode-ssr.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "code-server-ssr.selectorLabels" . | nindent 6 }}
+      {{- include "vscode-ssr.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "code-server-ssr.labels" . | nindent 8 }}
-        {{- include "code-server-ssr.selectorLabels" . | nindent 8 }}
+        {{- include "vscode-ssr.labels" . | nindent 8 }}
+        {{- include "vscode-ssr.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ include "code-server-ssr.name" . }}
+        - name: {{ include "vscode-ssr.name" . }}
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
@@ -41,12 +41,12 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: {{ include "code-server-ssr.name" . }}-data
+            - name: {{ include "vscode-ssr.name" . }}-data
               mountPath: /app/data
           {{- end }}
       {{- if .Values.persistence.enabled }}
       volumes:
-        - name: {{ include "code-server-ssr.name" . }}-data
+        - name: {{ include "vscode-ssr.name" . }}-data
           persistentVolumeClaim:
-            claimName: {{ include "code-server-ssr.fullname" . }}-pvc
+            claimName: {{ include "vscode-ssr.fullname" . }}-pvc
       {{- end }}
