@@ -25,12 +25,14 @@ persistence:
   size: 10Gi
   storageClass: local
   mountPaths:
-    - name: code-server-data
-      mountPath: /root/.local/share/code-server
-    - name: code-server-config
-      mountPath: /root/.config/code-server
-    - name: dbus-socket
-      mountPath: /var/run/dbus
+    - name: root-home
+      mountPath: /root
+
+proxy:
+  enabled: true
+  http_proxy: "socks5://127.0.0.1:1080"
+  https_proxy: "socks5://127.0.0.1:1080"
+  no_proxy: "localhost,127.0.0.1"
 
 env:
   env1:
