@@ -29,6 +29,8 @@ persistence:
       mountPath: /root/.local/share/code-server
     - name: code-server-config
       mountPath: /root/.config/code-server
+    - name: dbus-socket
+      mountPath: /var/run/dbus
 
 env:
   env1:
