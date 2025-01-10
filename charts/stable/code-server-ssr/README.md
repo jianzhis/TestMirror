@@ -35,10 +35,15 @@
 
 ### SSR 代理使用说明
 
-- 使用 SSR 代理时，请确保在应用配置中正确设置代理域名。
-- 在 VSCode 环境中，可以通过设置环境变量来指定代理，例如在终端中运行：
+- 使用 SSR 代理时，proxy-manager 打开代理菜单
+- 菜单中拥有多个节点操作
   ```bash
-  export NODE_OPTIONS="--proxy=http://your-proxy-domain:port"
+  proxy-manager
+  ```
+- 访问外网说明
+  ```bash
+  proxychains4 你的代码
+  例如：proxychains4 git clone https://github.com/username/repository.git
   ```
 
 ### 安装各个语言环境的命令
@@ -73,6 +78,7 @@
 ### Git 的各种操作
 
 - **克隆一个仓库**:
+- 默认配置了 git 的代理，需要取消的话请使用 disable_proxy
 
   ```bash
   git clone https://github.com/username/repository.git
