@@ -19,8 +19,6 @@ spec:
         - name: {{ include "code-server-ssr.name" . }}
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          securityContext:
-            privileged: true
           ports:
             {{- range .Values.services }}
             - name: {{ .name }}
@@ -39,20 +37,16 @@ spec:
               value: "{{ $value.value }}"
             {{- end }}
             {{- end }}
-            - name: VSCODE_PROXY_URI
-              value: "http://127.0.0.1:1080"
-            - name: SHELL
-              value: /bin/bash
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.persistence.enabled }}
           volumeMounts:
-            {{- range .Values.persistence.mountPaths }}
-            - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
-              mountPath: {{ .mountPath }}
-            {{- end }}
+            - name: {{ include "code-server-ssr.name" . }}-data
+              mountPath: /app/data
+          {{- end }}
+      {{- if .Values.persistence.enabled }}
       volumes:
-        {{- range .Values.persistence.mountPaths }}
-        - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
+        - name: {{ include "code-server-ssr.name" . }}-data
           persistentVolumeClaim:
-            claimName: {{ include "code-server-ssr.fullname" $ }}-{{ .name }}-pvc
-        {{- end }}
+            claimName: {{ include "code-server-ssr.fullname" . }}-pvc
+      {{- end }}

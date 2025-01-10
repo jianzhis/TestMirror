@@ -1,13 +1,13 @@
 apiVersion: v2
 name: code-server-ssr
-description: 支持SSR代理的特殊制作的在线VSCode开发环境版本
+description: 支持SSR代理的在线VSCode开发环境
 version: 1.0.0
 appVersion: latest
 home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
 sources:
   - https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
 maintainers:
-  - name: niehaoran
+  - name: 倪德雄
     email: nidexiong@yunna.net
 annotations:
   yunna.net/category: development

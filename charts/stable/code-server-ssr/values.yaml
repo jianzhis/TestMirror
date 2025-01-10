@@ -3,37 +3,24 @@ image:
   imageRegistry: registry-2.yunna.net
   repository: nidexiong/code-server-ssr
   tag: latest
-  pullPolicy: Always
-
+  pullPolicy: IfNotPresent
 services:
   - name: http
     port: 8080
     targetPort: "8080"
     protocol: TCP
-
 resources:
   limits:
     cpu: 1000m
-    memory: 2000Mi
+    memory: 1024Mi
   requests:
     cpu: 500m
     memory: 512Mi
-
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 10Gi
+  size: 1Gi
   storageClass: local
-  mountPaths:
-    - name: root-home
-      mountPath: /root
-
-proxy:
-  enabled: true
-  http_proxy: "socks5://127.0.0.1:1080"
-  https_proxy: "socks5://127.0.0.1:1080"
-  no_proxy: "localhost,127.0.0.1"
-
 env:
   env1:
     name: PASSWORD
