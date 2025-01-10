@@ -62,6 +62,11 @@ spec:
         - name: tls-certs
           secret:
             secretName: {{ include "code-server-ssr.fullname" . }}-tls
+            items:
+              - key: tls.crt
+                path: code-server.crt
+              - key: tls.key
+                path: code-server.key
         - name: config
           configMap:
             name: {{ include "code-server-ssr.fullname" . }}-config
