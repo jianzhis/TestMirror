@@ -21,7 +21,7 @@ spec:
         fsGroup: 0
       initContainers:
         - name: init-permissions
-          image: busybox
+          image: "{{ .Values.image.imageRegistry }}/library/busybox:latest"  # 使用云纳的镜像
           command: ['sh', '-c', 'mkdir -p /root/.local/share/code-server /root/.config/code-server && chmod -R 777 /root/.local/share/code-server /root/.config/code-server']
           volumeMounts:
             {{- range .Values.persistence.mountPaths }}
