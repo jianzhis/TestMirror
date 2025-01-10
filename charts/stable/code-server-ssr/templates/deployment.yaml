@@ -37,16 +37,32 @@ spec:
               value: "{{ $value.value }}"
             {{- end }}
             {{- end }}
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.persistence.enabled }}
           volumeMounts:
+            {{- if .Values.persistence.enabled }}
             - name: {{ include "code-server-ssr.name" . }}-data
               mountPath: /app/data
-          {{- end }}
-      {{- if .Values.persistence.enabled }}
+            {{- end }}
+            {{- if .Values.tls.enabled }}
+            - name: tls-certs
+              mountPath: /root/.config/code-server/certificates
+              readOnly: true
+            - name: config
+              mountPath: /root/.config/code-server/config.yaml
+              subPath: config.yaml
+            {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
       volumes:
+        {{- if .Values.persistence.enabled }}
         - name: {{ include "code-server-ssr.name" . }}-data
           persistentVolumeClaim:
             claimName: {{ include "code-server-ssr.fullname" . }}-pvc
-      {{- end }}
+        {{- end }}
+        {{- if .Values.tls.enabled }}
+        - name: tls-certs
+          secret:
+            secretName: {{ include "code-server-ssr.fullname" . }}-tls
+        - name: config
+          configMap:
+            name: {{ include "code-server-ssr.fullname" . }}-config
+        {{- end }}
