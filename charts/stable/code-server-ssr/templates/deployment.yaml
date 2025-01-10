@@ -41,16 +41,12 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.persistence.enabled }}
           volumeMounts:
-            {{- range .Values.persistence.mountPaths }}
-            - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
-              mountPath: {{ .mountPath }}
-            {{- end }}
+            - name: {{ include "code-server-ssr.name" . }}-data
+              mountPath: /app/data
           {{- end }}
       {{- if .Values.persistence.enabled }}
       volumes:
-        {{- range .Values.persistence.mountPaths }}
-        - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
+        - name: {{ include "code-server-ssr.name" . }}-data
           persistentVolumeClaim:
-            claimName: {{ include "code-server-ssr.fullname" $ }}-{{ .name }}-pvc
-        {{- end }}
+            claimName: {{ include "code-server-ssr.fullname" . }}-pvc
       {{- end }}

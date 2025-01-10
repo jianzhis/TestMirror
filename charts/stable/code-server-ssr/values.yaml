@@ -21,10 +21,6 @@ persistence:
   accessMode: ReadWriteOnce
   size: 10Gi
   storageClass: local
-  mountPaths:
-    - name: code-server-data
-      # 修改挂载路径到正确的位置
-      mountPath: /home/coder/.local/share/code-server
 env:
   env1:
     name: PASSWORD
