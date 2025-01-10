@@ -3,29 +3,25 @@ image:
   imageRegistry: registry-2.yunna.net
   repository: nidexiong/code-server-ssr
   tag: latest
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 services:
-  - name: vscode
+  - name: http
     port: 8080
     targetPort: "8080"
-    protocol: TCP
-  - name: ssr-proxy
-    port: 1080
-    targetPort: "1080"
     protocol: TCP
 resources:
   limits:
     cpu: 1000m
-    memory: 2000Mi
+    memory: 1024Mi
   requests:
     cpu: 500m
     memory: 512Mi
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 10Gi
+  size: 1Gi
   storageClass: local
 env:
   env1:
     name: PASSWORD
-    value: ""
+    value: changeme
