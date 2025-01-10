@@ -15,10 +15,25 @@ spec:
         {{- include "code-server-ssr.labels" . | nindent 8 }}
         {{- include "code-server-ssr.selectorLabels" . | nindent 8 }}
     spec:
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+      initContainers:
+        - name: init-permissions
+          image: busybox
+          command: ['sh', '-c', 'mkdir -p /root/.local/share/code-server /root/.config/code-server && chmod -R 777 /root/.local/share/code-server /root/.config/code-server']
+          volumeMounts:
+            {{- range .Values.persistence.mountPaths }}
+            - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
+              mountPath: {{ .mountPath }}
+            {{- end }}
       containers:
         - name: {{ include "code-server-ssr.name" . }}
           image: "{{ .Values.image.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          securityContext:
+            privileged: true
           ports:
             {{- range .Values.services }}
             - name: {{ .name }}
@@ -37,16 +52,18 @@ spec:
               value: "{{ $value.value }}"
             {{- end }}
             {{- end }}
+            - name: SHELL
+              value: /bin/bash
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - name: {{ include "code-server-ssr.name" . }}-data
-              mountPath: /app/data
-          {{- end }}
-      {{- if .Values.persistence.enabled }}
+            {{- range .Values.persistence.mountPaths }}
+            - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
+              mountPath: {{ .mountPath }}
+            {{- end }}
       volumes:
-        - name: {{ include "code-server-ssr.name" . }}-data
+        {{- range .Values.persistence.mountPaths }}
+        - name: {{ include "code-server-ssr.name" $ }}-{{ .name }}
           persistentVolumeClaim:
-            claimName: {{ include "code-server-ssr.fullname" . }}-pvc
-      {{- end }}
+            claimName: {{ include "code-server-ssr.fullname" $ }}-{{ .name }}-pvc
+        {{- end }}

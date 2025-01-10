@@ -4,11 +4,13 @@ image:
   repository: nidexiong/code-server-ssr
   tag: latest
   pullPolicy: Always
+
 services:
   - name: http
     port: 8080
     targetPort: "8080"
     protocol: TCP
+
 resources:
   limits:
     cpu: 1000m
@@ -16,11 +18,18 @@ resources:
   requests:
     cpu: 500m
     memory: 512Mi
+
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
   size: 10Gi
   storageClass: local
+  mountPaths:
+    - name: code-server-data
+      mountPath: /root/.local/share/code-server
+    - name: code-server-config
+      mountPath: /root/.config/code-server
+
 env:
   env1:
     name: PASSWORD
