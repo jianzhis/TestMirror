@@ -19,9 +19,16 @@ resources:
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
-  size: 1Gi
+  size: 10Gi
   storageClass: local
 env:
   env1:
     name: PASSWORD
     value: changeme
+
+service:
+  type: NodePort
+
+tls:
+  enabled: true
+  secretName: code-server-ssr-tls

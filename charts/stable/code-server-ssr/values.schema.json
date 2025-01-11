@@ -63,11 +63,7 @@
         "accessMode": {
           "type": "string",
           "title": "访问模式",
-          "enum": [
-            "ReadWriteOnce",
-            "ReadOnlyMany",
-            "ReadWriteMany"
-          ],
+          "enum": ["ReadWriteOnce", "ReadOnlyMany", "ReadWriteMany"],
           "default": "ReadWriteOnce"
         },
         "size": {
@@ -80,6 +76,29 @@
           "type": "string",
           "title": "存储类",
           "default": "local"
+        }
+      }
+    },
+    "service": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ClusterIP", "NodePort", "LoadBalancer"],
+          "default": "NodePort"
+        }
+      }
+    },
+    "tls": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "secretName": {
+          "type": "string",
+          "default": "code-server-ssr-tls"
         }
       }
     },
@@ -106,9 +125,5 @@
       }
     }
   },
-  "required": [
-    "replicaCount",
-    "resources",
-    "persistence"
-  ]
+  "required": ["replicaCount", "resources", "persistence"]
 }

@@ -29,3 +29,12 @@ Selector labels
 app.kubernetes.io/name: {{ include "code-server-ssr.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
+
+{{/* Generate self-signed certificates */}}
+{{- define "code-server-ssr.gen-certs" -}}
+{{- $altNames := list ( printf "%s.%s" (include "code-server-ssr.fullname" .) .Release.Namespace ) ( printf "%s.%s.svc" (include "code-server-ssr.fullname" .) .Release.Namespace ) -}}
+{{- $ca := genCA "code-server-ca" 876000 -}}
+{{- $cert := genSignedCert ( include "code-server-ssr.fullname" . ) nil $altNames 876000 $ca -}}
+tls.crt: {{ $cert.Cert | b64enc }}
+tls.key: {{ $cert.Key | b64enc }}
+{{- end -}}

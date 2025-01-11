@@ -39,14 +39,20 @@ spec:
             {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if .Values.persistence.enabled }}
           volumeMounts:
+            {{- if .Values.persistence.enabled }}
             - name: {{ include "code-server-ssr.name" . }}-data
               mountPath: /app/data
-          {{- end }}
-      {{- if .Values.persistence.enabled }}
+            {{- end }}
+            - name: tls-certs
+              mountPath: /etc/ssl/certs
+              readOnly: true
       volumes:
+        {{- if .Values.persistence.enabled }}
         - name: {{ include "code-server-ssr.name" . }}-data
           persistentVolumeClaim:
             claimName: {{ include "code-server-ssr.fullname" . }}-pvc
-      {{- end }}
+        {{- end }}
+        - name: tls-certs
+          secret:
+            secretName: {{ include "code-server-ssr.fullname" . }}-tls
