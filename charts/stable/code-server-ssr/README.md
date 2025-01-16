@@ -42,7 +42,7 @@
 
 ## 使用说明
 
-这是一个基于 code-server 的在线 IDE 环境，集成了 SSR 代理支持。通过配置 PASSWORD 可以设置访问密码，配置 PROXY_DOMAIN 可以设置代理域名。部署后可以通过浏览器访问完整的 VSCode 开发环境。
+这是一个基于 code-server 的在线 IDE 环境，集成了 SSR 代理支持。通过配置 PASSWORD 可以设置访问密码，配置 PROXY_DOMAIN 可以设置代理域名。部署后可以通过浏览器访问完整的 VSCode 开发环境。测试
 
 ## 故障排除
 
